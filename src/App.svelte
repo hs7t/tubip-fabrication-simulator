@@ -1,10 +1,13 @@
 <script>
+  import Machine from "./lib/Machine.svelte";
 </script>
 
 <header>
   <h1>Tubip Fabrication Simulator</h1>
 </header>
+
 <main>
+  <Machine />
 </main>
 
 <style>
