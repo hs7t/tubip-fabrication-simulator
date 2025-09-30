@@ -6,8 +6,8 @@
     let machineImageAlt = $state()
     switch (machineType) {
         case "dohlwropMicrowave": 
-            machineImagePath = ASSETS.machines.dohlwrop_microwave
-            machineImageAlt = "A Dohlwrop Microwave machine"
+            machineImagePath = ASSETS.machines.dohlwrop_microwave.img
+            machineImageAlt = ASSETS.machines.dohlwrop_microwave.img
     }
 </script>
 
@@ -19,6 +19,14 @@
 
 <style>
     .machine button {
+        width: 100%;
+        height: 100%;
+
+        border: 0;
+        outline: none;
+        background-color: transparent;
+    }
+    .machine button img {
         width: 100%;
         height: 100%;
     }
