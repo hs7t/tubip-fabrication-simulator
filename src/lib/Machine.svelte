@@ -11,12 +11,15 @@
     }
 </script>
 
-<span class="container">
-    <div class="machine">
+<div class="machine">
+    <button>
         <img src={machineImagePath} alt={machineImageAlt}>
-    </div>
-</span>
+    </button>
+</div>
 
 <style>
-
+    .machine button {
+        width: 100%;
+        height: 100%;
+    }
 </style>
