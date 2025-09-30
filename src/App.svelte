@@ -1,5 +1,9 @@
 <script>
   import Machine from "./lib/Machine.svelte";
+  
+  let gameState = {
+    machineType: "dohlwropMicrowave"
+  }
 </script>
 
 <header>
@@ -7,7 +11,7 @@
 </header>
 
 <main>
-  <Machine />
+  <Machine machineType={gameState.machineType}/>
 </main>
 
 <style>
