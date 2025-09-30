@@ -11,6 +11,12 @@
     }
 </script>
 
-<div class="machine">
-    <img src={machineImagePath} alt={machineImageAlt}>
-</div>
+<span class="container">
+    <div class="machine">
+        <img src={machineImagePath} alt={machineImageAlt}>
+    </div>
+</span>
+
+<style>
+
+</style>
