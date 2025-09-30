@@ -1,12 +1,10 @@
 <script>
-  import GameView from "./lib/GameView.svelte";
 </script>
 
 <header>
   <h1>Tubip Fabrication Simulator</h1>
 </header>
 <main>
-  <GameView />
 </main>
 
 <style>
