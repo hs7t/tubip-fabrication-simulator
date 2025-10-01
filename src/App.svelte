@@ -27,7 +27,7 @@
   </section>
 
   <section id="shareholder-value-creation">
-      <Machine onEnter={handleTubipGeneration} machineType={gameState.machineType} />
+      <Machine onEnter={() => { handleTubipGeneration(1) }} machineType={gameState.machineType} />
   </section>
 
   <section id="market">
