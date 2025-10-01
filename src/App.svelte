@@ -1,10 +1,7 @@
 <script>
   import Machine from "./lib/Machine.svelte";
   import NumberInput from "./lib/NumberInput.svelte";
-  
-  let gameState = {
-    machineType: "dohlwropMicrowave"
-  }
+  import { gameState } from "./gamestate.svelte";
 </script>
 
 <main>
