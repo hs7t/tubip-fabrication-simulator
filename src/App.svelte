@@ -9,11 +9,9 @@
 
 <main>
   <h1>Tubip Fabrication Simulator</h1>
-  
+
   <section id="shareholder-value-creation">
-      <div class="machine">
-          <button>tubip</button>
-      </div>
+      <Machine machineType={gameState.machineType} />
   </section>
 
   <section id="market">
