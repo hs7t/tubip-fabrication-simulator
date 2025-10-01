@@ -1,5 +1,6 @@
 <script>
   import Machine from "./lib/Machine.svelte";
+  import NumberInput from "./lib/NumberInput.svelte";
   
   let gameState = {
     machineType: "dohlwropMicrowave"
@@ -8,21 +9,25 @@
 
 <main>
   <h1>Tubip Fabrication Simulator</h1>
-  <span class="machine-container">
-    <Machine machineType={gameState.machineType}/>
-  </span>
+  <section id="shareholder-value-creation">
+      <div class="machine">
+          <button>tubip</button>
+      </div>
+  </section>
+  <section id="market">
+      <NumberInput></NumberInput>
+
+      <button>buy tubip material</button>
+  </section>
 </main>
 
 <style>
-  .machine-container {
-    max-width: 20%;
-  }
   main {
     background-color: white;
     width: min(100vw, 100vh);
     height: min(75vw, 75vh);
     aspect-ratio: 4 / 3;
     padding: auto;
-    overflow: none;
+    overflow: scroll;
   }
 </style>
