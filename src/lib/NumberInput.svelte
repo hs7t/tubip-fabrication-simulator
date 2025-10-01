@@ -1,6 +1,5 @@
 <script>
-    let { id = "number-input", onEnter, value = $bindable() } = $props()
-
+    let { id = "number-input", onEnter = undefined, value = $bindable(undefined) } = $props()
 </script>
 
 <div {id}>
