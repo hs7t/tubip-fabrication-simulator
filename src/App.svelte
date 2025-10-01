@@ -6,12 +6,11 @@
   }
 </script>
 
-<header>
-  <h1>Tubip Fabrication Simulator</h1>
-</header>
-
 <main>
+  <h1>Tubip Fabrication Simulator</h1>
+  <span class="machine-container">
     <Machine machineType={gameState.machineType}/>
+  </span>
 </main>
 
 <style>
