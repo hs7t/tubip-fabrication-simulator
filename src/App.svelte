@@ -9,16 +9,17 @@
 
 <main>
   <h1>Tubip Fabrication Simulator</h1>
+  
   <section id="shareholder-value-creation">
       <div class="machine">
           <button>tubip</button>
       </div>
   </section>
-  <section id="market">
-      <NumberInput></NumberInput>
 
-      <button>buy tubip material</button>
-  </section>
+  <section id="market">
+      <NumberInput buttonLabel="buy tubip material"></NumberInput>
+      <NumberInput buttonLabel="sell tubip material"></NumberInput>
+    </section>
 </main>
 
 <style>
