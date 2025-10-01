@@ -5,6 +5,7 @@
 
   function handleMatterPurchase(amount) {
     gameState.coins -= amount;
+    gameState.matter += amount;
   }
 
   function handleTubipSale(amount) {
@@ -21,11 +22,12 @@
   <section id="overview">
     <h1>Tubip Fabrication Simulator</h1>
     <p>coins: {gameState.coins}</p>
+    <p>tubips: {gameState.tubips}</p>
     <p>tubip material: {gameState.matter}</p>
   </section>
 
   <section id="shareholder-value-creation">
-      <Machine machineType={gameState.machineType} />
+      <Machine onEnter={handleTubipGeneration} machineType={gameState.machineType} />
   </section>
 
   <section id="market">
