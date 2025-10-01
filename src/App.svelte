@@ -18,7 +18,11 @@
 </script>
 
 <main>
-  <h1>Tubip Fabrication Simulator</h1>
+  <section id="overview">
+    <h1>Tubip Fabrication Simulator</h1>
+    <p>coins: {gameState.coins}</p>
+    <p>tubip material: {gameState.matter}</p>
+  </section>
 
   <section id="shareholder-value-creation">
       <Machine machineType={gameState.machineType} />
