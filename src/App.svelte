@@ -2,6 +2,14 @@
   import Machine from "./lib/Machine.svelte";
   import NumberInput from "./lib/NumberInput.svelte";
   import { gameState } from "./gamestate.svelte.js";
+
+  function handleMatterPurchase(amount) {
+    gameState.coins -= amount;
+  }
+
+  function handleTubipSale(amount) {
+    gameState.coins += amount;
+  }
 </script>
 
 <main>
