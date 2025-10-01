@@ -1,7 +1,7 @@
 <script>
   import Machine from "./lib/Machine.svelte";
   import NumberInput from "./lib/NumberInput.svelte";
-  import { gameState } from "./gamestate.svelte";
+  import { gameState } from "./gamestate.svelte.js";
 </script>
 
 <main>
