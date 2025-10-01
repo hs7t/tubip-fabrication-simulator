@@ -11,13 +11,19 @@
 </header>
 
 <main>
-  <Machine machineType={gameState.machineType}/>
+    <Machine machineType={gameState.machineType}/>
 </main>
 
 <style>
+  .machine-container {
+    max-width: 20%;
+  }
   main {
-    width: 80%;
-    aspect-ratio: 4 / 3;
+    background-color: white;
     width: min(100vw, 100vh);
+    height: min(75vw, 75vh);
+    aspect-ratio: 4 / 3;
+    padding: auto;
+    overflow: none;
   }
 </style>
