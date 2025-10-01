@@ -9,6 +9,11 @@
 
   function handleTubipSale(amount) {
     gameState.coins += amount;
+    gameState.tubips -= amount;
+  }
+
+  function handleTubipGeneration(amount = 1) {
+    gameState.tubips += amount;
   }
 </script>
 
