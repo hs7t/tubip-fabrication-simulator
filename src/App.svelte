@@ -31,8 +31,8 @@
   </section>
 
   <section id="market">
-      <NumberInput buttonLabel="buy tubip material" onEnter={handleMatterPurchase(1)}></NumberInput>
-      <NumberInput buttonLabel="sell tubips" onEnter={handleTubipSale(1)}></NumberInput>
+      <NumberInput buttonLabel="buy tubip material" onEnter={() => { handleMatterPurchase(1) }}></NumberInput>
+      <NumberInput buttonLabel="sell tubips" onEnter={() => { handleTubipSale(1) }}></NumberInput>
     </section>
 </main>
 
