@@ -1,8 +1,8 @@
 <script>
-    let { id = "number-input", onEnter = undefined, value = $bindable(undefined) } = $props()
+    let { id = "number-input", buttonLabel = "enter", onEnter = undefined, value = $bindable(undefined) } = $props()
 </script>
 
 <div {id}>
     <input type="number" bind:value={value}>
-    <button onclick={onEnter}>sell tubips</button>
+    <button onclick={onEnter}>{buttonLabel}</button>
 </div>
