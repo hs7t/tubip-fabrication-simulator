@@ -1,12 +1,15 @@
 export let game = $state({
   state: {
     machineType: "dohlwropMicrowave",
-    generationsPerClick: 1,
     coins: 0,
     tubips: 0,
     matter: 0,
   },
   economy: {
+    generationQuantities: {
+      tubipGenerationsPerClick: 1,
+      matterGenerationPerLoop: 2,
+    },
     values: {
       tubips: 1,
       matter: 1,
