@@ -1,4 +1,4 @@
-import { generateMatter } from "./gamestate.svelte";
+import { generateMatter, game } from "./gamestate.svelte";
 
 let ticks = 0;
 
@@ -7,7 +7,7 @@ export function loop() {
     ticks++;
 
     if (ticks % 10 == 0) {
-      generateMatter(5);
+      generateMatter(game.economy.generationQuantities.matterPerLoop);
     }
 
     loop();
