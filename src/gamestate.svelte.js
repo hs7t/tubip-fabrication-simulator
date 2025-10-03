@@ -8,7 +8,7 @@ export let game = $state({
   economy: {
     generationQuantities: {
       tubipPerClick: 1,
-      matterPerLoop: 2,
+      matterPerTick: 2,
     },
     values: {
       tubips: 1,
