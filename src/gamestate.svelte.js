@@ -1,6 +1,16 @@
 export let game = $state({
-  state: {},
-  economy: {},
+  state: {
+    machineType: "dohlwropMicrowave",
+    coins: 0,
+    tubips: 0,
+    matter: 0,
+  },
+  economy: {
+    values: {
+      tubips: 1,
+      matter: 1,
+    },
+  },
 });
 
 function saveGameToLocalStorage() {
@@ -38,13 +48,11 @@ function createNewGame() {
 
 function loadGame() {
   const savedGame = fetchGameFromLocalStorage();
-  const newGame = createNewGame();
 
   if (savedGame != null) {
     game.state = savedGame.state;
     game.economy = savedGame.economy;
-  } else {
-    game.state = newGame.state;
-    game.economy = newGame.economy;
   }
 }
+
+loadGame();
