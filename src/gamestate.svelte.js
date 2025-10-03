@@ -9,24 +9,31 @@ function saveGameToLocalStorage() {
 }
 
 async function fetchGameFromLocalStorage() {
-  let gameEconomy = JSON.parse(await localStorage.getItem("game.economy"));
-  let gameState = JSON.parse(await localStorage.getItem("game.state"));
-
-  return { state: gameState, economy: gameEconomy };
+  try {
+    let gameEconomy = JSON.parse(await localStorage.getItem("game.economy"));
+    let gameState = JSON.parse(await localStorage.getItem("game.state"));
+    return { state: gameState, economy: gameEconomy };
+  } catch (e) {
+    return null;
+  }
 }
 
-function startGameFresh() {
-  game.state = {
+function createNewGame() {
+  let gameState = {
     machineType: "dohlwropMicrowave",
     coins: 0,
     tubips: 0,
     matter: 0,
   };
 
-  game.economy = {
+  let gameEconomy = {
     values: {
       tubips: 1,
       matter: 1,
     },
   };
+
+  return { state: gameState, economy: gameEconomy };
 }
+
+function loadGame() {}
