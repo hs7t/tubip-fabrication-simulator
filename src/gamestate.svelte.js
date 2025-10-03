@@ -36,4 +36,15 @@ function createNewGame() {
   return { state: gameState, economy: gameEconomy };
 }
 
-function loadGame() {}
+async function loadGame() {
+  const savedGame = await fetchGameFromLocalStorage();
+  const newGame = await createNewGame();
+
+  if (savedGame != null) {
+    game.state = savedGame.state;
+    game.economy = savedGame.economy;
+  } else {
+    game.state = newGame.state;
+    game.economy = newGame.economy;
+  }
+}
