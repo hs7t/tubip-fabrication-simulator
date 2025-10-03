@@ -26,7 +26,13 @@ function fetchGameFromLocalStorage() {
     const gameState = JSON.parse(localStorage.getItem("game.state"));
     const fetchedGame = { state: gameState, economy: gameEconomy };
 
-    console.log("fetched game, " + fetchedGame);
+    if (!(gameEconomy == null || gameState == null)) {
+      console.log("fetched game, ", fetchedGame);
+    } else {
+      throw "ouchie";
+    }
+
+    return fetchedGame;
   } catch (e) {
     return null;
   }
