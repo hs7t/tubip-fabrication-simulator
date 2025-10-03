@@ -68,7 +68,7 @@ export function handleTubipSale(amount) {
 }
 
 export function handleTubipGeneration() {
-  game.state.tubips += game.state.generationsPerClick;
+  game.state.tubips += game.economy.generationQuantities.tubipPerClick;
 }
 
 loadGame();

@@ -7,7 +7,7 @@ export function loop() {
     ticks++;
 
     if (ticks % 10 == 0) {
-      generateMatter(game.economy.generationQuantities.matterPerLoop);
+      generateMatter(game.economy.generationQuantities.matterPerTick);
     }
 
     loop();
