@@ -39,24 +39,6 @@ function fetchGameFromLocalStorage() {
   }
 }
 
-function createNewGame() {
-  let gameState = {
-    machineType: "dohlwropMicrowave",
-    coins: 0,
-    tubips: 0,
-    matter: 0,
-  };
-
-  let gameEconomy = {
-    values: {
-      tubips: 1,
-      matter: 1,
-    },
-  };
-
-  return { state: gameState, economy: gameEconomy };
-}
-
 function loadGame() {
   const savedGame = fetchGameFromLocalStorage();
 
