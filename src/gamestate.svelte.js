@@ -8,10 +8,10 @@ function saveGameToLocalStorage() {
   localStorage.setItem("game.state", JSON.stringify(game.state));
 }
 
-async function fetchGameFromLocalStorage() {
+function fetchGameFromLocalStorage() {
   try {
-    let gameEconomy = JSON.parse(await localStorage.getItem("game.economy"));
-    let gameState = JSON.parse(await localStorage.getItem("game.state"));
+    let gameEconomy = JSON.parse(localStorage.getItem("game.economy"));
+    let gameState = JSON.parse(localStorage.getItem("game.state"));
     return { state: gameState, economy: gameEconomy };
   } catch (e) {
     return null;
@@ -36,9 +36,9 @@ function createNewGame() {
   return { state: gameState, economy: gameEconomy };
 }
 
-async function loadGame() {
-  const savedGame = await fetchGameFromLocalStorage();
-  const newGame = await createNewGame();
+function loadGame() {
+  const savedGame = fetchGameFromLocalStorage();
+  const newGame = createNewGame();
 
   if (savedGame != null) {
     game.state = savedGame.state;
