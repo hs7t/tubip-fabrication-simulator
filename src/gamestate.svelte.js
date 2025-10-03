@@ -48,14 +48,8 @@ function loadGame() {
   }
 }
 
-export function handleMatterPurchase(amount) {
-  if (amount > 0) {
-    const coinResult = game.state.coins - amount * game.economy.values.matter;
-    if (coinResult >= 0) {
-      game.state.coins = coinResult;
-      game.state.matter += amount;
-    }
-  }
+export function generateMatter(amount = 1) {
+  game.state.matter += amount;
 }
 
 export function handleTubipSale(amount) {
