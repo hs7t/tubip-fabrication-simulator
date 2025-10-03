@@ -65,4 +65,30 @@ function loadGame() {
   }
 }
 
+export function handleMatterPurchase(amount) {
+  if (amount > 0) {
+    const coinResult = game.state.coins - amount * game.economy.values.matter;
+    if (coinResult >= 0) {
+      game.state.coins = coinResult;
+      game.state.matter += amount;
+    }
+  }
+}
+
+export function handleTubipSale(amount) {
+  if (amount > 0) {
+    let tubipResult = game.state.tubips - amount * game.economy.values.tubips;
+    if (tubipResult >= 0) {
+      game.state.coins += amount;
+      game.state.tubips = tubipResult;
+      return;
+    }
+    console.log("failed, " + tubipResult);
+  }
+}
+
+export function handleTubipGeneration() {
+  game.state.tubips += game.state.generationsPerClick;
+}
+
 loadGame();
