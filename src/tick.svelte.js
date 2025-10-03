@@ -2,7 +2,7 @@ import { generateMatter } from "./gamestate.svelte";
 
 let ticks = 0;
 
-function loop() {
+export function loop() {
   setInterval(() => {
     ticks++;
 
