@@ -13,7 +13,7 @@ export let game = $state({
   },
 });
 
-function saveGameToLocalStorage() {
+export function saveGameToLocalStorage() {
   localStorage.setItem("game.economy", JSON.stringify(game.economy));
   localStorage.setItem("game.state", JSON.stringify(game.state));
 
