@@ -8,6 +8,13 @@ function saveGameToLocalStorage() {
   localStorage.setItem("game.state", JSON.stringify(game.state));
 }
 
+async function fetchGameFromLocalStorage() {
+  let gameEconomy = JSON.parse(await localStorage.getItem("game.economy"));
+  let gameState = JSON.parse(await localStorage.getItem("game.state"));
+
+  return { state: gameState, economy: gameEconomy };
+}
+
 function startGameFresh() {
   game.state = {
     machineType: "dohlwropMicrowave",
