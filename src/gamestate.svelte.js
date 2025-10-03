@@ -16,13 +16,17 @@ export let game = $state({
 function saveGameToLocalStorage() {
   localStorage.setItem("game.economy", JSON.stringify(game.economy));
   localStorage.setItem("game.state", JSON.stringify(game.state));
+
+  console.log("saved game, " + fetchGameFromLocalStorage());
 }
 
 function fetchGameFromLocalStorage() {
   try {
-    let gameEconomy = JSON.parse(localStorage.getItem("game.economy"));
-    let gameState = JSON.parse(localStorage.getItem("game.state"));
-    return { state: gameState, economy: gameEconomy };
+    const gameEconomy = JSON.parse(localStorage.getItem("game.economy"));
+    const gameState = JSON.parse(localStorage.getItem("game.state"));
+    const fetchedGame = { state: gameState, economy: gameEconomy };
+
+    console.log("fetched game, " + fetchedGame);
   } catch (e) {
     return null;
   }
