@@ -1,7 +1,7 @@
 <script>
   import Machine from "./lib/Machine.svelte";
   import NumberInput from "./lib/NumberInput.svelte";
-  import { game, saveGameToLocalStorage, handleTubipGeneration, handleMatterPurchase, handleTubipSale } from "./gamestate.svelte.js";
+  import { game, saveGameToLocalStorage, handleTubipGeneration, handleTubipSale } from "./gamestate.svelte.js";
 
 
   window.addEventListener("beforeunload", (e) => { saveGameToLocalStorage() })
@@ -20,7 +20,6 @@
   </section>
 
   <section id="market">
-      <NumberInput buttonLabel="buy tubip material" onEnter={(response) => { handleMatterPurchase(response) }} allowNegatives={false}></NumberInput>
       <NumberInput buttonLabel="sell tubips" onEnter={(response) => { handleTubipSale(response) }} allowNegatives={false}></NumberInput>
     </section>
 </main>
