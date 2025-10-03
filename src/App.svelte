@@ -1,19 +1,27 @@
 <script>
   import Machine from "./lib/Machine.svelte";
   import NumberInput from "./lib/NumberInput.svelte";
-  import { gameState } from "./gamestate.svelte.js";
+  import { gameState, economyState } from "./gamestate.svelte.js";
 
   function handleMatterPurchase(amount) {
     if (amount > 0) {
-      gameState.coins -= amount;
-      gameState.matter += amount;
+      const coinResult = gameState.coins - (amount * economyState.values.matter);
+      if (coinResult >= 0) {
+        gameState.coins = coinResult;
+        gameState.matter += amount;
+      }
     }
   }
 
   function handleTubipSale(amount) {
     if (amount > 0) {
-      gameState.coins += amount;
-      gameState.tubips -= amount;
+      let tubipResult = gameState.tubips - (amount * economyState.values.tubips);
+      if (tubipResult >= 0) {
+        gameState.coins += amount;
+        gameState.tubips = tubipResult;
+        return
+      }
+      console.log("failed, " + tubipResult)
     }
   }
 
