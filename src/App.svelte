@@ -43,8 +43,8 @@
   </section>
 
   <section id="market">
-      <NumberInput buttonLabel="buy tubip material" onEnter={() => { handleMatterPurchase(1) }} allowNegatives={false}></NumberInput>
-      <NumberInput buttonLabel="sell tubips" onEnter={() => { handleTubipSale(1) }} allowNegatives={false}></NumberInput>
+      <NumberInput buttonLabel="buy tubip material" onEnter={(response) => { handleMatterPurchase(response) }} allowNegatives={false}></NumberInput>
+      <NumberInput buttonLabel="sell tubips" onEnter={(response) => { handleTubipSale(response) }} allowNegatives={false}></NumberInput>
     </section>
 </main>
 

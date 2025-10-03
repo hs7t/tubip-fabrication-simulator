@@ -8,5 +8,5 @@
     {:else} 
         <input type="number" bind:value={value}>
     {/if}
-    <button onclick={onEnter}>{buttonLabel}</button>
+    <button onclick={() => { onEnter(value) }}>{buttonLabel}</button>
 </div>
