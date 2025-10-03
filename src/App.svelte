@@ -1,7 +1,7 @@
 <script>
   import Machine from "./lib/Machine.svelte";
   import NumberInput from "./lib/NumberInput.svelte";
-  import { game } from "./gamestate.svelte.js";
+  import { game, saveGameToLocalStorage } from "./gamestate.svelte.js";
 
   function handleMatterPurchase(amount) {
     if (amount > 0) {
@@ -28,6 +28,8 @@
   function handleTubipGeneration(amount = 1) {
     game.state.tubips += amount;
   }
+
+  window.addEventListener("beforeunload", (e) => { saveGameToLocalStorage() })
 </script>
 
 <main>
