@@ -1,24 +1,24 @@
 <script>
   import Machine from "./lib/Machine.svelte";
   import NumberInput from "./lib/NumberInput.svelte";
-  import { gameState, economyState } from "./gamestate.svelte.js";
+  import { game } from "./gamestate.svelte.js";
 
   function handleMatterPurchase(amount) {
     if (amount > 0) {
-      const coinResult = gameState.coins - (amount * economyState.values.matter);
+      const coinResult = game.state.coins - (amount * game.economy.values.matter);
       if (coinResult >= 0) {
-        gameState.coins = coinResult;
-        gameState.matter += amount;
+        game.state.coins = coinResult;
+        game.state.matter += amount;
       }
     }
   }
 
   function handleTubipSale(amount) {
     if (amount > 0) {
-      let tubipResult = gameState.tubips - (amount * economyState.values.tubips);
+      let tubipResult = game.state.tubips - (amount * game.economy.values.tubips);
       if (tubipResult >= 0) {
-        gameState.coins += amount;
-        gameState.tubips = tubipResult;
+        game.state.coins += amount;
+        game.state.tubips = tubipResult;
         return
       }
       console.log("failed, " + tubipResult)
@@ -26,20 +26,20 @@
   }
 
   function handleTubipGeneration(amount = 1) {
-    gameState.tubips += amount;
+    game.state.tubips += amount;
   }
 </script>
 
 <main>
   <section id="overview">
     <h1>Tubip Fabrication Simulator</h1>
-    <p>coins: {gameState.coins}</p>
-    <p>tubips: {gameState.tubips}</p>
-    <p>tubip material: {gameState.matter}</p>
+    <p>coins: {game.state.coins}</p>
+    <p>tubips: {game.state.tubips}</p>
+    <p>tubip material: {game.state.matter}</p>
   </section>
 
   <section id="shareholder-value-creation">
-      <Machine onEnter={() => { handleTubipGeneration(1) }} machineType={gameState.machineType} />
+      <Machine onEnter={() => { handleTubipGeneration(1) }} machineType={game.state.machineType} />
   </section>
 
   <section id="market">
