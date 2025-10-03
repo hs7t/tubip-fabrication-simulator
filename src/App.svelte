@@ -4,13 +4,17 @@
   import { gameState } from "./gamestate.svelte.js";
 
   function handleMatterPurchase(amount) {
-    gameState.coins -= amount;
-    gameState.matter += amount;
+    if (amount > 0) {
+      gameState.coins -= amount;
+      gameState.matter += amount;
+    }
   }
 
   function handleTubipSale(amount) {
-    gameState.coins += amount;
-    gameState.tubips -= amount;
+    if (amount > 0) {
+      gameState.coins += amount;
+      gameState.tubips -= amount;
+    }
   }
 
   function handleTubipGeneration(amount = 1) {
