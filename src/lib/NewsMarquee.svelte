@@ -8,15 +8,9 @@
 
 <div class="marquee-box">
     {#each [1, 2, 3] as scrolled}
-        {#if scrolled == 1}
-        <span class="scrolling" id="scrolled-{scrolled}">
+        <span class="scrolling" id="scrolled-{scrolled}" aria-hidden={!(scrolled == 1)}>
             {@render content()}
         </span>
-        {:else}
-        <span class="scrolling" id="scrolled-{scrolled}" aria-hidden="true">
-            {@render content()}
-        </span>
-        {/if}
     {/each}
 </div>
 
@@ -46,5 +40,4 @@
         }
         /* TYSM, Ryan! https://ryanmulligan.dev/blog/css-marquee/ */
     }
-
 </style>
