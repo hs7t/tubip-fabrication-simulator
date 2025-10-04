@@ -21,7 +21,7 @@
 
     <div class="market">
       <h2>Market</h2>
-      <NumberInput buttonLabel="sell tubips" onEnter={(response) => { handleTubipSale(response) }} allowNegatives={false}></NumberInput>
+      <NumberInput buttonLabel="sell tubip" onEnter={(response) => { handleTubipSale(response) }} allowNegatives={false}></NumberInput>
     </div>
   </section>
   

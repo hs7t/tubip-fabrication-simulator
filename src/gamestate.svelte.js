@@ -4,7 +4,7 @@ export let game = $state({
   state: {
     machineType: "dohlwropMicrowave",
     coins: 0,
-    tubips: 0,
+    tubip: 0,
     matter: 10,
     news: {
       headline: "It's a new dawn for tubip manufacturing!",
@@ -20,11 +20,11 @@ export let game = $state({
       matterPerTick: 1,
     },
     coinValues: {
-      tubips: 1,
+      tubip: 1,
       matter: 1,
     },
     matterValues: {
-      tubips: 2,
+      tubip: 2,
     },
   },
 });
@@ -82,11 +82,11 @@ function randomizeInteger(integer, randomness) {
 export function fluctuateEconomy() {
   game.economy.generationQuantities.tubipPerClick = randomizeInteger(
     game.economy.generationQuantitiesStatic.tubipPerClick,
-    game.economy.randomness,
+    game.economy.randomness
   );
   game.economy.generationQuantities.matterPerTick = randomizeInteger(
     game.economy.generationQuantitiesStatic.matterPerTick,
-    game.economy.randomness,
+    game.economy.randomness
   );
 }
 
@@ -95,19 +95,19 @@ export function generateMatter(amount = 1) {
 }
 
 export function handleTubipSale(amount) {
-  let tubipResult = game.state.tubips - amount * game.economy.coinValues.tubips;
+  let tubipResult = game.state.tubip - amount * game.economy.coinValues.tubip;
   if (tubipResult >= 0) {
     game.state.coins += amount;
-    game.state.tubips = tubipResult;
+    game.state.tubip = tubipResult;
     return;
   }
   console.log("failed, " + tubipResult);
 }
 
 export function handleTubipGeneration() {
-  let matterResult = game.state.matter - game.economy.matterValues.tubips;
+  let matterResult = game.state.matter - game.economy.matterValues.tubip;
   if (matterResult >= 0) {
-    game.state.tubips += game.economy.generationQuantities.tubipPerClick;
+    game.state.tubip += game.economy.generationQuantities.tubipPerClick;
     game.state.matter = matterResult;
   }
 }

@@ -4,7 +4,7 @@
 </script>
 
 <div class="stats">
-    {#each ["coins", "tubips", "matter"] as stat}
+    {#each ["coins", "tubip", "matter"] as stat}
     <div class="stat">
         <p>{stat}:</p>
         {#key game.state[stat]}
