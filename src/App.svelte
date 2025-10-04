@@ -6,15 +6,20 @@
   import NewsMarquee from "./lib/NewsMarquee.svelte";
 
   window.addEventListener("beforeunload", (e) => { saveGameToLocalStorage() })
+
+  import { slide } from 'svelte/transition'
 </script>
 
 <main>
   <section id="overview">
     <h1>Tubip Fabrication Simulator</h1>
     <div class="stats">
-      <p>coins: {game.state.coins}</p>
-      <p>tubips: {game.state.tubips}</p>
-      <p>tubip material: {game.state.matter}</p>
+      {#each ["coins", "tubips", "matter"] as stat}
+        <p>{stat}:</p>
+        {#key game.state[stat]}
+          <p transition:slide>{game.state[stat]}</p>
+        {/key}
+      {/each}
     </div>
 
     <div class="news">
