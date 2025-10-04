@@ -34,7 +34,7 @@
 
 <style>
   main {
-    background-color: white;
+    background-color: inherit;
     padding: 5%;
 
     min-width: 100%;
