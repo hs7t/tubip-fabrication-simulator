@@ -15,12 +15,12 @@
       <p>tubips: {game.state.tubips}</p>
       <p>tubip material: {game.state.matter}</p>
     </div>
+
+    <div class="news">
+      <p>{game.state.news.headline}</p>
+    </div>
   </section>
   
-  <section id="news">
-    <p>{game.state.news.headline}</p>
-  </section>
-
   <section id="economy">
     <div id="shareholder-value-creation">
       <Machine onEnter={() => { handleTubipGeneration() }} machineType={game.state.machineType} />
@@ -40,7 +40,21 @@
     min-width: 100%;
 
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    flex-wrap: wrap;
     gap: 1rem;
+  }
+
+  section {
+    padding: 1em;
+    border: solid 1pt var(--t-color-primary);
+  }
+
+  #overview {
+    flex-grow: 1;
+  }
+
+  #economy {
+    flex-grow: 2;
   }
 </style>
