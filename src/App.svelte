@@ -2,10 +2,8 @@
   import Machine from "./lib/Machine.svelte";
   import NumberInput from "./lib/NumberInput.svelte";
   import { game, saveGameToLocalStorage, handleTubipGeneration, handleTubipSale } from "./gamestate.svelte.js";
-  import { loop } from './tick.svelte.js';
+  import './tick.svelte.js'
 
-  loop()
-  
   window.addEventListener("beforeunload", (e) => { saveGameToLocalStorage() })
 </script>
 

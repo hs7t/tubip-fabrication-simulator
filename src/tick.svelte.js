@@ -2,14 +2,17 @@ import { generateMatter, game } from "./gamestate.svelte";
 
 let ticks = 0;
 
-export function loop() {
+function runLoop() {
   setInterval(() => {
     ticks++;
 
-    if (ticks % 10 == 0) {
+    if (ticks % 2 == 0) {
       generateMatter(game.economy.generationQuantities.matterPerTick);
+      console.log("Generated matter");
     }
 
-    loop();
-  }, 6000);
+    console.log("Tick");
+  }, 3000);
 }
+
+runLoop();
