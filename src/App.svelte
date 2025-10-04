@@ -12,8 +12,10 @@
 
 <main>
   <section id="overview">
+    <NewsMarquee headline={game.state.news.headline}/>
     <h1>Tubip Fabrication Simulator</h1>  
     <Stats />
+    <hr>
     <div>
       <h2>Market</h2>
       <NumberInput buttonLabel="sell tubips" onEnter={(response) => { handleTubipSale(response) }} allowNegatives={false}></NumberInput>
@@ -21,7 +23,6 @@
   </section>
   
   <section id="economy">
-    <NewsMarquee headline={game.state.news.headline}/>
     <Machine onEnter={() => { handleTubipGeneration() }} machineType={game.state.machineType} />
   </section>
 </main>
