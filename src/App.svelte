@@ -13,9 +13,12 @@
 <main>
   <section id="overview">
     <NewsMarquee headline={game.state.news.headline}/>
-    <h1>Tubip Fabrication Simulator</h1>  
-    <Stats />
-    <hr>
+
+    <div class="infobox">
+      <h1>Tubip Fabrication Simulator</h1>  
+      <Stats />
+    </div>
+
     <div>
       <h2>Market</h2>
       <NumberInput buttonLabel="sell tubips" onEnter={(response) => { handleTubipSale(response) }} allowNegatives={false}></NumberInput>
@@ -52,7 +55,7 @@
     flex: 1 1 400px;
 
     padding: 1em;
-    gap: 1em;
+    gap: 2em;
 
     border-radius: var(--t-radius-large);
   }
@@ -60,6 +63,12 @@
   #overview {
     flex-shrink: 2;
     flex-grow: unset;
+  }
+
+  #overview .infobox {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8em;
   }
 
   #economy {
