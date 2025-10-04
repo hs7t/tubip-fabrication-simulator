@@ -1,5 +1,5 @@
 export let currentHeadline = $state({
-  text: "It's a new dawn for tubip manufacturing",
+  text: "It's a new dawn for tubip manufacturing!",
 });
 
 let genericHeadlines = [
