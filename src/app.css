@@ -3,6 +3,8 @@
     --t-color-background: #E8E5DA;
     --t-color-overlay-background: #ffffff;
     --t-color-overlay-primary: #333333;
+    --t-color-accent: #D42121;
+    --t-color-accent-dim: #9F1919;
 
     --t-border-primary: solid 1pt var(--t-color-primary);
     --t-border-secondary: dashed 1pt var(--t-color-primary);
