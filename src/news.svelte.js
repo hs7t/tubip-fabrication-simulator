@@ -17,7 +17,7 @@ function fetchRandomHeadline(source) {
   return source[Math.floor(Math.random() * source.length)];
 }
 
-function updateNews() {
+export function updateNews() {
   const fetchNewHeadline =
     Math.random() > 0.5 || currentHeadline.text == undefined;
   if (fetchNewHeadline == true) {
