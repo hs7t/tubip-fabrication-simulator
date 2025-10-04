@@ -47,6 +47,7 @@ gameEvents.addEventListener("effectStart", (e) => {
     items[itemId].ticksRemaining = effect.duration;
   }
   items[itemId].active = true;
+  items[itemId].level += 1;
 });
 
 gameEvents.addEventListener("effectEnd", (e) => {
