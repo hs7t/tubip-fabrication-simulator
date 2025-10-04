@@ -10,7 +10,7 @@ function sendEffectEvent(event, effectItemId) {
   );
 }
 
-let items = {
+export let items = {
   dohlwropAutomator: {
     id: "dohlwropAutomator",
     name: "Dohlwrop Automator",
@@ -56,4 +56,16 @@ gameEvents.addEventListener("effectEnd", (e) => {
 
   items[itemId].ticksRemaining = undefined;
   items[itemId].active = false;
+});
+
+gameEvents.addEventListener("tick", () => {
+  for (let itemKey in items.keys()) {
+    if ((items[itemKey].active = false)) break;
+
+    const effectTicksRemaining = items[itemKey].effect.ticksRemaining;
+    // Decrease ticks by one if ticking
+    if (effectTicksRemaining != undefined && effectTicksRemaining != 0) {
+      items[itemKey].effect.ticksRemaining -= 1;
+    }
+  }
 });
