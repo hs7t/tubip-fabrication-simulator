@@ -46,7 +46,11 @@
   }
 
   section {
+    display: flex;
+    flex-direction: column;
+
     padding: 1em;
+    gap: 1em;
     border: solid 1pt var(--t-color-primary);
   }
 
