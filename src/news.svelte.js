@@ -4,7 +4,7 @@ export let currentHeadline = $state({
 
 let genericHeadlines = [
   {
-    headline: "Tubip mention by acclaimed celebrity sparks tubip craze",
+    headline: "Acclaimed human's tubip mention sparks purchasing craze",
     priceMultiplier: 1.2,
   },
   {
