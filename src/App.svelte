@@ -42,7 +42,6 @@
 
     padding: 1em;
     gap: 1em;
-    border: solid 1pt var(--t-color-primary);
 
     border-radius: var(--t-radius-large);
   }
