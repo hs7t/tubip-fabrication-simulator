@@ -8,7 +8,7 @@ export let game = $state({
   economy: {
     generationQuantities: {
       tubipPerClick: 1,
-      matterPerTick: 2,
+      matterPerTick: 1,
     },
     values: {
       tubips: 1,
@@ -46,8 +46,13 @@ function loadGame() {
   const savedGame = fetchGameFromLocalStorage();
 
   if (savedGame != null) {
-    game.state = savedGame.state;
-    game.economy = savedGame.economy;
+    if (
+      window.confirm("You have a saved game. Would you like to load it?") ==
+      true
+    ) {
+      game.state = savedGame.state;
+      game.economy = savedGame.economy;
+    }
   }
 }
 
