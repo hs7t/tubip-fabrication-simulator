@@ -10,3 +10,10 @@
     {/if}
     <button onclick={() => { onEnter(value) }}>{buttonLabel}</button>
 </div>
+
+<style>
+    input {
+        min-width: 4ch;
+        field-sizing: content;
+    }
+</style>
