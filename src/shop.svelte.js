@@ -47,3 +47,11 @@ gameEvents.addEventListener("effectStart", (e) => {
   }
   items[itemId].active = true;
 });
+
+gameEvents.addEventListener("effectEnd", (e) => {
+  // @ts-ignore
+  let itemId = e.detail.id;
+
+  items[itemId].ticksRemaining = undefined;
+  items[itemId].active = false;
+});
