@@ -1,4 +1,5 @@
 import { game } from "./gamestate.svelte";
+import { gameEvents } from "./tick.svelte";
 
 let genericHeadlines = [
   {
@@ -22,3 +23,11 @@ export function updateNews() {
     game.state.news.headline = fetchRandomHeadline(genericHeadlines).headline;
   }
 }
+
+gameEvents.addEventListener("tick", (e) => {
+  // @ts-ignore
+  let ticks = e.detail.tickCount;
+  if (ticks % 25 == 0) {
+    updateNews();
+  }
+});
