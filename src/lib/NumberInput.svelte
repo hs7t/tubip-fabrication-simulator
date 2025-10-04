@@ -13,7 +13,7 @@
 
 <style>
     input {
-        min-width: 4ch;
+        min-width: 8ch;
         field-sizing: content;
     }
 </style>
