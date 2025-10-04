@@ -12,10 +12,10 @@
 
 <main>
   <section id="overview">
-    <h1>Tubip Fabrication Simulator</h1>
-    
-    <Stats />
     <NewsMarquee headline={game.state.news.headline} />
+
+    <h1>Tubip Fabrication Simulator</h1>  
+    <Stats />
   </section>
   
   <section id="economy">
@@ -26,14 +26,16 @@
 
 <style>
   main {
-    background-color: inherit;
-    padding: 5%;
-
-    width: clamp(280px, 100%, 1000px);
-
     display: flex;
     flex-direction: column;
+
     gap: 1rem;
+    padding: 5%;
+    width: clamp(280px, 100%, 1000px);
+
+    margin: auto;
+
+    background-color: inherit;
   }
 
   section {
@@ -46,12 +48,7 @@
     border-radius: var(--t-radius-large);
   }
 
-  #overview {
-    flex-shrink: 3;
-  }
-
   #economy {
-    flex-grow: 2;
     align-items: center;
     justify-content: center;
   }
