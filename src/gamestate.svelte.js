@@ -3,7 +3,6 @@ export const gameEvents = new GameEvents();
 
 export let game = $state({
   state: {
-    machineType: "dohlwropMicrowave",
     coins: 0,
     tubip: 0,
     matter: 10,
@@ -20,6 +19,7 @@ export let game = $state({
       tubipPerTick: 2,
       matterPerTick: 1,
     },
+    effects: {},
     coinValues: {
       tubip: 1,
       matter: 1,
