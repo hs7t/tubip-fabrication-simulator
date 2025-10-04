@@ -27,7 +27,7 @@ export function updateNews() {
 gameEvents.addEventListener("tick", (e) => {
   // @ts-ignore
   let ticks = e.detail.tickCount;
-  if (ticks % 25 == 0) {
+  if (ticks % 20 == 0) {
     updateNews();
   }
 });
