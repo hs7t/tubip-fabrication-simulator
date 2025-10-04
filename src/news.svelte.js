@@ -1,4 +1,4 @@
-export let currentHeadline = $state(undefined);
+export let currentHeadline = $state({ text: undefined });
 
 let genericHeadlines = [
   {
@@ -16,8 +16,9 @@ function fetchRandomHeadline(source) {
 }
 
 function updateNews() {
-  const fetchNewHeadline = Math.random() > 0.5 || currentHeadline == undefined;
+  const fetchNewHeadline =
+    Math.random() > 0.5 || currentHeadline.text == undefined;
   if (fetchNewHeadline == true) {
-    currentHeadline = fetchRandomHeadline(genericHeadlines);
+    currentHeadline.text = fetchRandomHeadline(genericHeadlines);
   }
 }
