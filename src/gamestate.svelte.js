@@ -123,6 +123,7 @@ gameEvents.addEventListener("tick", (e) => {
 
   if (ticks % 1 == 0) {
     saveGameToLocalStorage();
+    fluctuateEconomy();
   }
 });
 
