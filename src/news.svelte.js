@@ -7,7 +7,7 @@ let genericHeadlines = [
     priceMultiplier: 1.2,
   },
   {
-    headline: "Tubip companies on the rise. Bubble?",
+    headline: "Tubip companies on the rise. Is it a bubble?",
     priceMultiplier: 0.8,
   },
 ];
