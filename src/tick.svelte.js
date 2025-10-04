@@ -1,4 +1,8 @@
-import { generateMatter, game } from "./gamestate.svelte.js";
+import {
+  game,
+  generateMatter,
+  saveGameToLocalStorage,
+} from "./gamestate.svelte.js";
 import { updateNews } from "./news.svelte.js";
 
 let ticks = 0;
@@ -14,6 +18,10 @@ function runLoop() {
 
     if (ticks % 10 == 0) {
       updateNews();
+    }
+
+    if (ticks % 1 == 0) {
+      saveGameToLocalStorage();
     }
 
     console.log("Tick");
