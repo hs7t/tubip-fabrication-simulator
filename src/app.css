@@ -55,6 +55,8 @@ button {
   color: var(--t-color-overlay-background);
   background-color: var(--t-color-overlay-primary);
   transition: all 100ms;
+  user-select: none;
+  cursor: pointer;
 }
 
 button:focus,
