@@ -6,6 +6,7 @@ export let game = $state({
     matter: 10,
   },
   economy: {
+    randomness: 0.3,
     generationQuantitiesStatic: {
       tubipPerClick: 1,
       matterPerTick: 1,
@@ -25,7 +26,6 @@ game.state.economy.generationQuantities = {
   tubipPerClick: 1,
   matterPerTick: 1,
 };
-
 
 export function saveGameToLocalStorage() {
   localStorage.setItem("game.economy", JSON.stringify(game.economy));
@@ -64,6 +64,21 @@ function loadGame() {
       game.economy = savedGame.economy;
     }
   }
+}
+
+function randomizeInteger(integer, randomness) {
+  return Math.floor(integer * (1 + (Math.random() - 0.5) * randomness));
+}
+
+export function fluctuateEconomy() {
+  game.economy.generationQuantities.tubipPerClick = randomizeInteger(
+    game.economy.generationQuantitiesStatic,
+    game.economy.randomness
+  );
+  game.economy.generationQuantities.matterPerTick = randomizeInteger(
+    game.economy.generationQuantitiesStatic,
+    game.economy.randomness
+  );
 }
 
 export function generateMatter(amount = 1) {
