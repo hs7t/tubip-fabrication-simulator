@@ -12,7 +12,7 @@
 </script>
 
 <div class="machine">
-    <button onclick={onEnter}>tubip</button>
+    <button onclick={onEnter}>FABRICATE</button>
 </div>
 
 <style>
@@ -24,9 +24,20 @@
         border-radius: 8pt;
         box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.25) inset, 0 0 5.7px 0 rgba(255, 188, 55, 0.7);
         font-weight: 700;
+        transition: all 200ms;
     }
 
     button:hover {
-        transform: NONE;
+        outline: solid 2pt #FFFFFF;
+        outline-offset: 2pt;
+    }
+    button:active {
+        transform: none;
+        transform: scale(0.8) rotate(3deg);
+        font-weight: 1000;
+        background-color: #FFCF00;
+        border-color: #cb8000;
+        color: #503300;
+        outline: 3pt solid #503300;
     }
 </style>
