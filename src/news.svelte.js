@@ -18,7 +18,7 @@ function fetchRandomHeadline(source) {
 
 export function updateNews() {
   const fetchNewHeadline =
-    Math.random() > 0.6 || game.state.news.headline == undefined;
+    Math.random() > 0.3 || game.state.news.headline == undefined;
   if (fetchNewHeadline == true) {
     game.state.news.headline = fetchRandomHeadline(genericHeadlines).headline;
   }
@@ -27,7 +27,7 @@ export function updateNews() {
 gameEvents.addEventListener("tick", (e) => {
   // @ts-ignore
   let ticks = e.detail.tickCount;
-  if (ticks % 20 == 0) {
+  if (ticks % 10 == 0) {
     updateNews();
   }
 });
