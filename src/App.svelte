@@ -62,5 +62,7 @@
 
   #economy {
     flex-grow: 2;
+    align-items: center;
+    justify-content: center;
   }
 </style>
