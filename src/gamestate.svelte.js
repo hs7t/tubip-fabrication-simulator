@@ -10,9 +10,12 @@ export let game = $state({
       tubipPerClick: 1,
       matterPerTick: 1,
     },
-    values: {
+    coinValues: {
       tubips: 1,
       matter: 1,
+    },
+    matterValues: {
+      tubips: 2,
     },
   },
 });
@@ -61,7 +64,7 @@ export function generateMatter(amount = 1) {
 }
 
 export function handleTubipSale(amount) {
-  let tubipResult = game.state.tubips - amount * game.economy.values.tubips;
+  let tubipResult = game.state.tubips - amount * game.economy.coinValues.tubips;
   if (tubipResult >= 0) {
     game.state.coins += amount;
     game.state.tubips = tubipResult;
@@ -71,8 +74,11 @@ export function handleTubipSale(amount) {
 }
 
 export function handleTubipGeneration() {
-
-  game.state.tubips += game.economy.generationQuantities.tubipPerClick;
+  let coinResult = game.state.matter - game.economy.matterValues.tubips;
+  if (coinResult >= 0) {
+    game.state.tubips += game.economy.generationQuantities.tubipPerClick;
+    game.state.coins = coinResult;
+  }
 }
 
 loadGame();
