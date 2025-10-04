@@ -74,10 +74,10 @@ export function handleTubipSale(amount) {
 }
 
 export function handleTubipGeneration() {
-  let coinResult = game.state.matter - game.economy.matterValues.tubips;
-  if (coinResult >= 0) {
+  let matterResult = game.state.matter - game.economy.matterValues.tubips;
+  if (matterResult >= 0) {
     game.state.tubips += game.economy.generationQuantities.tubipPerClick;
-    game.state.coins = coinResult;
+    game.state.matter = matterResult;
   }
 }
 
