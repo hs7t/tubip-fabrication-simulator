@@ -20,22 +20,26 @@
     <p>{currentHeadline.text}</p>
   </section>
 
-  <section id="shareholder-value-creation">
-      <Machine onEnter={() => { handleTubipGeneration() }} machineType={game.state.machineType} />
-  </section>
+  <section id="economy">
+    <section id="shareholder-value-creation">
+        <Machine onEnter={() => { handleTubipGeneration() }} machineType={game.state.machineType} />
+    </section>
 
-  <section id="market">
+    <section id="market">
       <NumberInput buttonLabel="sell tubips" onEnter={(response) => { handleTubipSale(response) }} allowNegatives={false}></NumberInput>
     </section>
+  </section>
 </main>
 
 <style>
   main {
     background-color: white;
-    width: min(100vw, 100vh);
-    height: min(75vw, 75vh);
-    aspect-ratio: 4 / 3;
-    padding: auto;
-    overflow: scroll;
+    padding: 5%;
+
+    min-width: 100%;
+
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
   }
 </style>
