@@ -17,7 +17,7 @@ function fetchRandomHeadline(source) {
 
 export function updateNews() {
   const fetchNewHeadline =
-    Math.random() > 0.4 || game.state.news.headline == undefined;
+    Math.random() > 0.6 || game.state.news.headline == undefined;
   if (fetchNewHeadline == true) {
     game.state.news.headline = fetchRandomHeadline(genericHeadlines).headline;
   }
