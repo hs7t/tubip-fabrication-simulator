@@ -15,9 +15,7 @@
 
     <Stats />
 
-    <div class="news">
-      <NewsMarquee headline={game.state.news.headline} />
-    </div>
+    <NewsMarquee headline={game.state.news.headline} />
   </section>
   
   <section id="economy">
