@@ -1,10 +1,10 @@
 import { game, gameEvents } from "./gamestate.svelte";
 
-function sendEffectEvent(event, effectId) {
+function sendEffectEvent(event, effectItemId) {
   gameEvents.dispatchEvent(
     new CustomEvent(event, {
       detail: {
-        id: effectId,
+        itemId: effectItemId,
       },
     })
   );
@@ -27,7 +27,6 @@ let items = {
         },
         onEnd: () => {
           sendEffectEvent("effectEnd", "dohlwropAutomator");
-          // TODO: remember to set/reset tick duration, active
           game.economy.generationQuantities.tubipPerTick -= 1;
         },
       },
@@ -37,3 +36,14 @@ let items = {
     },
   },
 };
+
+gameEvents.addEventListener("effectStart", (e) => {
+  // @ts-ignore
+  let itemId = e.detail.id;
+  let effect = items[itemId].effect;
+
+  if (effect.duration) {
+    items[itemId].ticksRemaining = effect.duration;
+  }
+  items[itemId].active = true;
+});
