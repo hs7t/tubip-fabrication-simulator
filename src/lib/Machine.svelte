@@ -1,14 +1,5 @@
 <script>
-    import { ASSETS } from "../assets";
-    let { machineType, onEnter = undefined } = $props()
-    
-    let machineImagePath = $state()
-    let machineImageAlt = $state()
-    switch (machineType) {
-        case "dohlwropMicrowave": 
-            machineImagePath = ASSETS.machines.dohlwrop_microwave.img
-            machineImageAlt = ASSETS.machines.dohlwrop_microwave.img
-    }
+    let { onEnter = undefined } = $props()
 </script>
 
 <div class="machine">

@@ -26,7 +26,7 @@
   </section>
   
   <section id="economy">
-    <Machine onEnter={() => { handleTubipGeneration() }} machineType={game.state.machineType} />
+    <Machine onEnter={() => { handleTubipGeneration() }} />
   </section>
 </main>
 
