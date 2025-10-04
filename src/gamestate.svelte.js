@@ -61,18 +61,17 @@ export function generateMatter(amount = 1) {
 }
 
 export function handleTubipSale(amount) {
-  if (amount > 0) {
-    let tubipResult = game.state.tubips - amount * game.economy.values.tubips;
-    if (tubipResult >= 0) {
-      game.state.coins += amount;
-      game.state.tubips = tubipResult;
-      return;
-    }
-    console.log("failed, " + tubipResult);
+  let tubipResult = game.state.tubips - amount * game.economy.values.tubips;
+  if (tubipResult >= 0) {
+    game.state.coins += amount;
+    game.state.tubips = tubipResult;
+    return;
   }
+  console.log("failed, " + tubipResult);
 }
 
 export function handleTubipGeneration() {
+
   game.state.tubips += game.economy.generationQuantities.tubipPerClick;
 }
 
