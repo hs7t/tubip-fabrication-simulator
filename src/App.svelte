@@ -30,10 +30,12 @@
   main {
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
 
     gap: 1rem;
     padding: 5%;
-    /*width: clamp(280px, 100%, 1000px);*/
+    width: clamp(280px, 100%, 1200px);
 
     margin: auto;
 
@@ -43,16 +45,17 @@
   section {
     display: flex;
     flex-direction: column;
+    min-width: 20vw;
+    flex: 1 1 400px;
 
     padding: 1em;
     gap: 1em;
-    justify-content: center;
-    align-items: center;
 
     border-radius: var(--t-radius-large);
   }
 
   #overview {
-    flex-shrink: 3;
+    flex-shrink: 2;
+    flex-grow: unset;
   }
 </style>
