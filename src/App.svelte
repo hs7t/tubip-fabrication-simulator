@@ -4,23 +4,16 @@
   import { game, saveGameToLocalStorage, handleTubipGeneration, handleTubipSale } from "./gamestate.svelte.js";
   import './tick.svelte.js'
   import NewsMarquee from "./lib/NewsMarquee.svelte";
+  import Stats from "./lib/Stats.svelte";
 
   window.addEventListener("beforeunload", (e) => { saveGameToLocalStorage() })
-
-  import { slide } from 'svelte/transition'
 </script>
 
 <main>
   <section id="overview">
     <h1>Tubip Fabrication Simulator</h1>
-    <div class="stats">
-      {#each ["coins", "tubips", "matter"] as stat}
-        <p>{stat}:</p>
-        {#key game.state[stat]}
-          <p transition:slide>{game.state[stat]}</p>
-        {/key}
-      {/each}
-    </div>
+
+    <Stats />
 
     <div class="news">
       <NewsMarquee headline={game.state.news.headline} />
