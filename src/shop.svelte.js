@@ -63,8 +63,15 @@ gameEvents.addEventListener("tick", () => {
     if ((items[itemKey].active = false)) break;
 
     const effectTicksRemaining = items[itemKey].effect.ticksRemaining;
+
+    // End effect if no ticks remaining
+    if (effectTicksRemaining == 0) {
+      sendEffectEvent("effectEnd", items[itemKey].id);
+      break;
+    }
+
     // Decrease ticks by one if ticking
-    if (effectTicksRemaining != undefined && effectTicksRemaining != 0) {
+    if (effectTicksRemaining != undefined) {
       items[itemKey].effect.ticksRemaining -= 1;
     }
   }
