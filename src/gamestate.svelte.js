@@ -22,7 +22,7 @@ export let game = $state({
   },
 });
 
-game.state.economy.generationQuantities = {
+game.economy.generationQuantities = {
   // starting values, just in case; should be $derived() from randomizer function by ticker
   tubipPerClick: game.economy.generationQuantitiesStatic.tubipPerClick,
   matterPerTick: game.economy.generationQuantitiesStatic.matterPerTick,
