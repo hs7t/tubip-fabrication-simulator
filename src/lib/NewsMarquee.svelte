@@ -1,4 +1,6 @@
 <script>
+  import { slide } from 'svelte/transition';
+
     let { headline } = $props()
 </script>
 
@@ -8,9 +10,11 @@
 
 <div class="marquee-box">
     {#each [1, 2, 3] as scrolled}
-        <span class="scrolling" id="scrolled-{scrolled}" aria-hidden={!(scrolled == 1)}>
-            {@render content()}
-        </span>
+        {#key headline}
+            <span class="scrolling" id="scrolled-{scrolled}" aria-hidden={!(scrolled == 1)} transition:slide>
+                {@render content()}
+            </span>
+        {/key}
     {/each}
 </div>
 
