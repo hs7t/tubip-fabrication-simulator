@@ -8,3 +8,10 @@ let genericHeadlines = [
     priceMultiplier: 0.8,
   },
 ];
+
+function fetchRandomHeadline(source) {
+  return source[Math.floor(Math.random() * source.length)];
+}
+
+function updateNews() {}
+const randomBool = Math.random() > 0.5;
