@@ -2,7 +2,7 @@ export let currentHeadline = $state({ text: undefined });
 
 let genericHeadlines = [
   {
-    headline: "New film 'Tubips' by acclaimed director sparks tubip craze",
+    headline: "Tubip mention by acclaimed celebrity sparks tubip craze",
     priceMultiplier: 1.2,
   },
   {
