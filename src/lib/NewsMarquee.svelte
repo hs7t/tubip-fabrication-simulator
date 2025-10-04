@@ -16,7 +16,7 @@
 
 <style>
     .marquee-box {
-        --gap: 1em;
+        --gap: 1ch;
         display: flex;
         max-width: 30vw;
         flex-direction: row;
@@ -35,6 +35,8 @@
         border: solid 3pt var(--m-border-color);
         color: var(--m-color);
         font-family: var(--t-font-family-secondary);
+        padding: 0.8ch;
+        border-radius: 8pt;
     }
 
     .marquee-box .scrolling {
