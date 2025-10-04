@@ -1,3 +1,5 @@
+import { gameEvents } from "./tick.svelte";
+
 export let game = $state({
   state: {
     machineType: "dohlwropMicrowave",
@@ -109,5 +111,19 @@ export function handleTubipGeneration() {
     game.state.matter = matterResult;
   }
 }
+
+gameEvents.addEventListener("tick", (e) => {
+  // @ts-ignore
+  const ticks = e.detail.tickCount;
+
+  if (ticks % 2 == 0) {
+    generateMatter(game.economy.generationQuantities.matterPerTick);
+    console.log("Generated matter");
+  }
+
+  if (ticks % 1 == 0) {
+    saveGameToLocalStorage();
+  }
+});
 
 loadGame();
