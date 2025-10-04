@@ -20,7 +20,7 @@
 
 <style>
     .marquee-box {
-        --gap: 1ch;
+        --gap: 3ch;
         display: flex;
         max-width: 100%;
         flex-direction: row;
@@ -36,7 +36,7 @@
         --m-color: #ffffff;
 
         background-color: var(--m-background-color);
-        border: solid 3pt var(--m-border-color);
+        outline: solid 3pt var(--m-border-color);
         color: var(--m-color);
         font-family: var(--t-font-family-secondary);
         padding: 0.8ch;
