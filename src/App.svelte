@@ -12,20 +12,14 @@
 <main>
   <section id="overview">
     <h1>Tubip Fabrication Simulator</h1>
-
+    
     <Stats />
-
     <NewsMarquee headline={game.state.news.headline} />
   </section>
   
   <section id="economy">
-    <div id="shareholder-value-creation">
-      <Machine onEnter={() => { handleTubipGeneration() }} machineType={game.state.machineType} />
-    </div>
-
-    <div id="market">
-      <NumberInput buttonLabel="sell tubips" onEnter={(response) => { handleTubipSale(response) }} allowNegatives={false}></NumberInput>
-    </div>
+    <Machine onEnter={() => { handleTubipGeneration() }} machineType={game.state.machineType} />
+    <NumberInput buttonLabel="sell tubips" onEnter={(response) => { handleTubipSale(response) }} allowNegatives={false}></NumberInput>
   </section>
 </main>
 
