@@ -1,3 +1,5 @@
+export let news = $state();
+
 let genericHeadlines = [
   {
     headline: "New film 'Tubips' by acclaimed director sparks tubip craze",
@@ -13,5 +15,6 @@ function fetchRandomHeadline(source) {
   return source[Math.floor(Math.random() * source.length)];
 }
 
-function updateNews() {}
-const randomBool = Math.random() > 0.5;
+function updateNews() {
+  const fetchNewHeadline = Math.random() > 0.5;
+}
