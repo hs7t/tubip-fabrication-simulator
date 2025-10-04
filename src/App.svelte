@@ -44,12 +44,9 @@
 
     padding: 1em;
     gap: 1em;
+    justify-content: center;
+    align-items: center;
 
     border-radius: var(--t-radius-large);
-  }
-
-  #economy {
-    align-items: center;
-    justify-content: center;
   }
 </style>
