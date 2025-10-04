@@ -82,11 +82,11 @@ function randomizeInteger(integer, randomness) {
 export function fluctuateEconomy() {
   game.economy.generationQuantities.tubipPerClick = randomizeInteger(
     game.economy.generationQuantitiesStatic.tubipPerClick,
-    game.economy.randomness
+    game.economy.randomness,
   );
   game.economy.generationQuantities.matterPerTick = randomizeInteger(
     game.economy.generationQuantitiesStatic.matterPerTick,
-    game.economy.randomness
+    game.economy.randomness,
   );
 }
 

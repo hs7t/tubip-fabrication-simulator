@@ -10,7 +10,7 @@ function runLoop() {
     gameEvents.dispatchEvent(
       new CustomEvent("tick", {
         detail: { tickCount: ticks },
-      })
+      }),
     );
   }, 3000);
 }
