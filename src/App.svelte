@@ -52,6 +52,7 @@
 
   #overview {
     flex-grow: 1;
+    flex-shrink: 3;
   }
 
   #economy {
