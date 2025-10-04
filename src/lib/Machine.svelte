@@ -16,4 +16,16 @@
 </div>
 
 <style>
+    button {
+        font-size: 2em;
+        background-color: var(--t-color-accent);
+        border: solid var(--t-color-accent-dim) 3pt;
+        border-radius: 8pt;
+        box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.25) inset, 0 0 5.7px 0 rgba(255, 188, 55, 0.7);
+        font-weight: 700;
+    }
+
+    button:hover {
+        transform: NONE;
+    }
 </style>
