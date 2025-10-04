@@ -1,5 +1,5 @@
 import { game } from "./gamestate.svelte";
-import { gameEvents } from "./tick.svelte";
+import { gameEvents } from "./gamestate.svelte";
 
 let genericHeadlines = [
   {

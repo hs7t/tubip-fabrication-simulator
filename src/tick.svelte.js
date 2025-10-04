@@ -1,5 +1,4 @@
-class GameEvents extends EventTarget {}
-export const gameEvents = new GameEvents();
+import { gameEvents } from "./gamestate.svelte";
 
 let ticks = 0;
 
@@ -10,7 +9,7 @@ function runLoop() {
     gameEvents.dispatchEvent(
       new CustomEvent("tick", {
         detail: { tickCount: ticks },
-      }),
+      })
     );
   }, 3000);
 }

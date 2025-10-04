@@ -1,4 +1,5 @@
-import { gameEvents } from "./tick.svelte";
+class GameEvents extends EventTarget {}
+export const gameEvents = new GameEvents();
 
 export let game = $state({
   state: {
