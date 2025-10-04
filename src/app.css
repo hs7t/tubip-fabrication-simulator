@@ -1,5 +1,11 @@
 :root {
-    --t-color-primary: #000000;
+    --t-color-primary: #333333;
+    --t-color-background: #E8E5DA;
+    --t-color-overlay-background: #ffffff;
+    --t-color-overlay-primary: #333333;
+
+    --t-border-primary: solid 1pt var(--t-color-primary);
+    --t-radius-primary: 2pt;
 }
 
 * {
@@ -8,7 +14,7 @@
 }
 
 body {
-    background-color: black;
+    background-color: var(--t-color-background);
 
     display: flex;
     align-items: center;
@@ -26,6 +32,16 @@ body {
 }
 
 input, button {
+    padding: 0.6ch;
     font-size: inherit;
     font-family: inherit;
+    background-color: var(--t-color-overlay-background);
+    color: var(--t-color-overlay-primary);
+    border: var(--t-border-primary);
+    border-radius: var(--t-radius-primary);
+}
+
+button {
+    color: var(--t-color-overlay-background);
+    background-color: var(--t-color-overlay-primary);
 }
