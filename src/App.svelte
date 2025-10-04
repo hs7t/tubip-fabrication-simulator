@@ -19,7 +19,7 @@
       <Stats />
     </div>
 
-    <div>
+    <div class="market">
       <h2>Market</h2>
       <NumberInput buttonLabel="sell tubips" onEnter={(response) => { handleTubipSale(response) }} allowNegatives={false}></NumberInput>
     </div>
@@ -65,7 +65,7 @@
     flex-grow: unset;
   }
 
-  #overview .infobox {
+  #overview .infobox, #overview .market {
     display: flex;
     flex-direction: column;
     gap: 0.8em;
