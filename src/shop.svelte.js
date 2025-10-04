@@ -15,6 +15,7 @@ let items = {
     id: "dohlwropAutomator",
     name: "Dohlwrop Automator",
     description: "Automates your clicks for a bit.",
+    coinPrice: 30,
     level: {
       max: 1,
       current: 0,
