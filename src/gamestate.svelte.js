@@ -3,7 +3,7 @@ export let game = $state({
     machineType: "dohlwropMicrowave",
     coins: 0,
     tubips: 0,
-    matter: 0,
+    matter: 10,
   },
   economy: {
     generationQuantities: {
