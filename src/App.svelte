@@ -3,6 +3,7 @@
   import NumberInput from "./lib/NumberInput.svelte";
   import { game, saveGameToLocalStorage, handleTubipGeneration, handleTubipSale } from "./gamestate.svelte.js";
   import './tick.svelte.js'
+  import NewsMarquee from "./lib/NewsMarquee.svelte";
 
   window.addEventListener("beforeunload", (e) => { saveGameToLocalStorage() })
 </script>
@@ -17,7 +18,7 @@
     </div>
 
     <div class="news">
-      <p>{game.state.news.headline}</p>
+      <NewsMarquee headline={game.state.news.headline} />
     </div>
   </section>
   
