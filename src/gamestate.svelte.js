@@ -6,7 +6,7 @@ export let game = $state({
     matter: 10,
   },
   economy: {
-    randomness: 0.3,
+    randomness: 0.5,
     generationQuantities: {},
     generationQuantitiesStatic: {
       tubipPerClick: 1,
