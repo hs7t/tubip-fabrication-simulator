@@ -5,7 +5,9 @@
     --t-color-overlay-primary: #333333;
 
     --t-border-primary: solid 1pt var(--t-color-primary);
+
     --t-radius-primary: 2pt;
+    --t-radius-large: 4pt;
 }
 
 * {
