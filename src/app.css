@@ -5,6 +5,7 @@
     --t-color-overlay-primary: #333333;
 
     --t-border-primary: solid 1pt var(--t-color-primary);
+    --t-border-secondary: dashed 1pt var(--t-color-primary);
 
     --t-radius-primary: 2pt;
     --t-radius-large: 4pt;
@@ -46,4 +47,19 @@ input, button {
 button {
     color: var(--t-color-overlay-background);
     background-color: var(--t-color-overlay-primary);
+    transition: all 100ms;
+}
+
+button:focus, button:hover {
+    outline: var(--t-border-secondary);
+    outline-offset: 2pt;
+}
+
+button:hover {
+    transform: scale(1.05);
+}
+
+button:active {
+    transform: rotateX(40deg) rotateY(10deg);
+    outline: none;
 }
