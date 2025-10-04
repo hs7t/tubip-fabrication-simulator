@@ -21,6 +21,6 @@ export function updateNews() {
   const fetchNewHeadline =
     Math.random() > 0.5 || currentHeadline.text == undefined;
   if (fetchNewHeadline == true) {
-    currentHeadline.text = fetchRandomHeadline(genericHeadlines);
+    currentHeadline.text = fetchRandomHeadline(genericHeadlines).headline;
   }
 }
