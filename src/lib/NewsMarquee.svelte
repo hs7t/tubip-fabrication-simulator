@@ -22,7 +22,7 @@
     .marquee-box {
         --gap: 1ch;
         display: flex;
-        max-width: 30vw;
+        max-width: 100%;
         flex-direction: row;
         overflow: hidden;
 
