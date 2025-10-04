@@ -61,4 +61,9 @@
     flex-shrink: 2;
     flex-grow: unset;
   }
+
+  #economy {
+    justify-content: center;
+    align-items: center;
+  }
 </style>
