@@ -14,7 +14,10 @@
   <section id="overview">
     <h1>Tubip Fabrication Simulator</h1>  
     <Stats />
-    <NumberInput buttonLabel="sell tubips" onEnter={(response) => { handleTubipSale(response) }} allowNegatives={false}></NumberInput>
+    <div>
+      <h2>Market</h2>
+      <NumberInput buttonLabel="sell tubips" onEnter={(response) => { handleTubipSale(response) }} allowNegatives={false}></NumberInput>
+    </div>
   </section>
   
   <section id="economy">
@@ -26,11 +29,11 @@
 <style>
   main {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
 
     gap: 1rem;
     padding: 5%;
-    width: clamp(280px, 100%, 1000px);
+    /*width: clamp(280px, 100%, 1000px);*/
 
     margin: auto;
 
@@ -47,5 +50,9 @@
     align-items: center;
 
     border-radius: var(--t-radius-large);
+  }
+
+  #overview {
+    flex-shrink: 3;
   }
 </style>
