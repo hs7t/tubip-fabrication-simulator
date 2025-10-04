@@ -17,4 +17,7 @@ function fetchRandomHeadline(source) {
 
 function updateNews() {
   const fetchNewHeadline = Math.random() > 0.5 || currentHeadline == undefined;
+  if (fetchNewHeadline == true) {
+    currentHeadline = fetchRandomHeadline(genericHeadlines);
+  }
 }
