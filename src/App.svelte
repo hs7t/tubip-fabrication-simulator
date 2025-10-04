@@ -2,6 +2,7 @@
   import Machine from "./lib/Machine.svelte";
   import NumberInput from "./lib/NumberInput.svelte";
   import { game, saveGameToLocalStorage, handleTubipGeneration, handleTubipSale } from "./gamestate.svelte.js";
+  import { currentHeadline } from './news.svelte'
   import './tick.svelte.js'
 
   window.addEventListener("beforeunload", (e) => { saveGameToLocalStorage() })
@@ -13,6 +14,10 @@
     <p>coins: {game.state.coins}</p>
     <p>tubips: {game.state.tubips}</p>
     <p>tubip material: {game.state.matter}</p>
+  </section>
+  
+  <section id="news">
+    <p>{currentHeadline.text}</p>
   </section>
 
   <section id="shareholder-value-creation">
