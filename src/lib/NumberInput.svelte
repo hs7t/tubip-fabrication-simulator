@@ -1,5 +1,5 @@
 <script>
-    let { id = "number-input", buttonLabel = "enter", onEnter = undefined, value = $bindable(undefined), allowNegatives = true } = $props()
+    let { id = "number-input", buttonLabel = "enter", onEnter = undefined, value = $bindable(1), allowNegatives = true } = $props()
 </script>
 
 <div {id}>
