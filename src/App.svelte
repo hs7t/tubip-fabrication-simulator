@@ -2,7 +2,6 @@
   import Machine from "./lib/Machine.svelte";
   import NumberInput from "./lib/NumberInput.svelte";
   import { game, saveGameToLocalStorage, handleTubipGeneration, handleTubipSale } from "./gamestate.svelte.js";
-  import { currentHeadline } from './news.svelte'
   import './tick.svelte.js'
 
   window.addEventListener("beforeunload", (e) => { saveGameToLocalStorage() })
@@ -17,7 +16,7 @@
   </section>
   
   <section id="news">
-    <p>{currentHeadline.text}</p>
+    <p>{game.state.news.headline}</p>
   </section>
 
   <section id="economy">

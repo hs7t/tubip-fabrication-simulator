@@ -1,6 +1,4 @@
-export let currentHeadline = $state({
-  text: "It's a new dawn for tubip manufacturing!",
-});
+import { game } from "./gamestate.svelte";
 
 let genericHeadlines = [
   {
@@ -19,8 +17,8 @@ function fetchRandomHeadline(source) {
 
 export function updateNews() {
   const fetchNewHeadline =
-    Math.random() > 0.5 || currentHeadline.text == undefined;
+    Math.random() > 0.5 || game.state.news.headline == undefined;
   if (fetchNewHeadline == true) {
-    currentHeadline.text = fetchRandomHeadline(genericHeadlines).headline;
+    game.state.news.headline = fetchRandomHeadline(genericHeadlines).headline;
   }
 }
