@@ -34,10 +34,11 @@
     flex-wrap: wrap;
     width: 100%;
     height: 100%;
-
+    
     gap: 1rem;
     padding: 5%;
     width: clamp(280px, 100%, 1200px);
+    align-items: center;
 
     margin: auto;
 
