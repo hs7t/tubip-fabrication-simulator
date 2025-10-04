@@ -1,67 +1,70 @@
 :root {
-    --t-color-primary: #333333;
-    --t-color-background: #E8E5DA;
-    --t-color-overlay-background: #ffffff;
-    --t-color-overlay-primary: #333333;
-    --t-color-accent: #D42121;
-    --t-color-accent-dim: #9F1919;
+  --t-color-primary: #333333;
+  --t-color-background: #e8e5da;
+  --t-color-overlay-background: #ffffff;
+  --t-color-overlay-primary: #333333;
+  --t-color-accent: #d42121;
+  --t-color-accent-dim: #9f1919;
+  --t-color-accent-contrast: rgb(255, 246, 246);
 
-    --t-border-primary: solid 1pt var(--t-color-primary);
-    --t-border-secondary: dashed 1pt var(--t-color-primary);
+  --t-border-primary: solid 1pt var(--t-color-primary);
+  --t-border-secondary: dashed 1pt var(--t-color-primary);
 
-    --t-radius-primary: 2pt;
-    --t-radius-large: 4pt;
+  --t-radius-primary: 2pt;
+  --t-radius-large: 4pt;
 }
 
 * {
-    margin: 0;
-    box-sizing: border-box;
+  margin: 0;
+  box-sizing: border-box;
 }
 
 body {
-    background-color: var(--t-color-background);
+  background-color: var(--t-color-background);
 
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
-    width: 100%;
-    height: 100%;
+  width: 100%;
+  height: 100%;
 
-    font-family: "Work Sans", ui-sans-serif, sans-serif;
+  font-family: "Work Sans", ui-sans-serif, sans-serif;
 }
 
 #app {
-    width: 100%;
-    height: 100%;
+  width: 100%;
+  height: 100%;
 }
 
-input, button {
-    padding: 0.6ch;
-    font-size: inherit;
-    font-family: inherit;
-    background-color: var(--t-color-overlay-background);
-    color: var(--t-color-overlay-primary);
-    border: var(--t-border-primary);
-    border-radius: var(--t-radius-primary);
+input,
+button {
+  padding: 0.6ch;
+  font-size: inherit;
+  font-family: inherit;
+  background-color: var(--t-color-overlay-background);
+  color: var(--t-color-overlay-primary);
+  border: var(--t-border-primary);
+  border-radius: var(--t-radius-primary);
 }
 
 button {
-    color: var(--t-color-overlay-background);
-    background-color: var(--t-color-overlay-primary);
-    transition: all 100ms;
+  color: var(--t-color-overlay-background);
+  background-color: var(--t-color-overlay-primary);
+  transition: all 100ms;
 }
 
-button:focus, button:hover {
-    outline: var(--t-border-secondary);
-    outline-offset: 2pt;
+button:focus,
+button:hover {
+  outline: var(--t-border-secondary);
+  outline-offset: 2pt;
 }
 
 button:hover {
-    transform: scale(1.05);
+  transform: scale(1.05);
 }
 
 button:active {
-    transform: rotateX(40deg) rotateY(10deg);
-    outline: none;
+  transform: rotateX(40deg) rotateY(10deg);
+  outline: none;
 }
