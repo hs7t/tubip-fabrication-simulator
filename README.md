@@ -1,3 +1,3 @@
 # tubip fabrication simulator
 
-a game
+A small game about fabricating tubips.
