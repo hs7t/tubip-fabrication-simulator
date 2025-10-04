@@ -31,9 +31,9 @@
     }
 
     .marquee-box {
-        --m-background-color: #1e1e1e;
+        --m-background-color: #313131;
         --m-border-color: #131313;
-        --m-color: #ffffff;
+        --m-color: #ffd000;
 
         background-color: var(--m-background-color);
         outline: solid 3pt var(--m-border-color);
