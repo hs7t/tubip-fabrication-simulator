@@ -26,9 +26,21 @@
         gap: var(--gap);
     }
 
+    .marquee-box {
+        --m-background-color: #1e1e1e;
+        --m-border-color: #131313;
+        --m-color: #ffffff;
+
+        background-color: var(--m-background-color);
+        border: solid 3pt var(--m-border-color);
+        color: var(--m-color);
+        font-family: var(--t-font-family-secondary);
+    }
+
     .marquee-box .scrolling {
         animation: scroll infinite 4s linear;
         user-select: none;
+        text-transform: uppercase;
     }
 
     @keyframes scroll {
