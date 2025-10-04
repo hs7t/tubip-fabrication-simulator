@@ -30,6 +30,7 @@
     button:hover {
         outline: solid 2pt #FFFFFF;
         outline-offset: 2pt;
+        box-shadow: none;
     }
     button:active {
         transform: none;
