@@ -4,7 +4,11 @@ export let game = $state({
     coins: 0,
     tubips: 0,
     matter: 10,
+    news: {
+      headline: "It's a new dawn for tubip manufacturing!",
+    },
   },
+
   economy: {
     randomness: 0.5,
     generationQuantities: {},
