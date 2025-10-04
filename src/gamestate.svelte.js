@@ -14,6 +14,7 @@ export let game = $state({
     generationQuantities: {},
     generationQuantitiesStatic: {
       tubipPerClick: 1,
+      tubipPerTick: 2,
       matterPerTick: 1,
     },
     coinValues: {
@@ -30,6 +31,7 @@ game.economy.generationQuantities = {
   // starting values, just in case; should be $derived() from randomizer function by ticker
   tubipPerClick: game.economy.generationQuantitiesStatic.tubipPerClick,
   matterPerTick: game.economy.generationQuantitiesStatic.matterPerTick,
+  tubipPerTick: game.economy.generationQuantitiesStatic.tubipPerTick,
 };
 
 export function saveGameToLocalStorage() {
