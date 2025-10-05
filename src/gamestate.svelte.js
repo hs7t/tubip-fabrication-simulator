@@ -9,6 +9,7 @@ export let game = $state({
     news: {
       headline: "It's a new dawn for tubip manufacturing!",
     },
+    autoClickers: [],
   },
 
   economy: {
@@ -105,11 +106,16 @@ export function handleTubipSale(amount) {
   console.log("failed, " + tubipResult);
 }
 
-export function handleTubipGeneration() {
-  let matterResult = game.state.matter - game.economy.matterValues.tubip;
+function handleTubipCreation() {
+  const matterResult = game.state.matter - game.economy.matterValues.tubip;
+  game.state.tubip += game.economy.generationQuantities.tubipPerClick;
+  game.state.matter = matterResult;
+}
+
+export function handleTubipFabrication() {
+  const matterResult = game.state.matter - game.economy.matterValues.tubip;
   if (matterResult >= 0) {
-    game.state.tubip += game.economy.generationQuantities.tubipPerClick;
-    game.state.matter = matterResult;
+    handleTubipCreation();
   }
 }
 
@@ -125,7 +131,16 @@ gameEvents.addEventListener("tick", (e) => {
   if (ticks % 1 == 0) {
     saveGameToLocalStorage();
     fluctuateEconomy();
+
+    for (let autoClicker of game.state.autoClickers) {
+      if (ticks % autoClicker.delay == 0) {
+      }
+    }
   }
 });
+
+export function registerAutoClicker(tickDelay, sourceItem = undefined) {
+  game.state.autoClickers.push({ delay: tickDelay, sourceItem: sourceItem });
+}
 
 loadGame();
