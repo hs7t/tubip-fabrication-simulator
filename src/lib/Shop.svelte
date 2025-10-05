@@ -53,6 +53,11 @@
         transition: all 100ms;
     }
 
+    .item:active {
+        transform: rotate(-2deg) scale(1.05);
+        font-weight: 600;
+    }
+
     .item:disabled {
         background-color: inherit;
         background: repeating-linear-gradient(
@@ -69,6 +74,7 @@
         transform: none;
         outline: var(--t-border-secondary);
         outline-offset: 0.2em;
+        font-weight: unset;
     }
 
     .item .name {
