@@ -36,3 +36,4 @@ This repo also contains a [workflow for GitHub Pages](./.github/workflows/publis
 
 ### And more!
 - [Ryan Mulligan](https://ryanmulligan.dev/)'s [awesome guide](https://ryanmulligan.dev/blog/css-marquee/) on designing CSS-based marquees
+- [Cookie Clicker](https://orteil.dashnet.org/cookieclicker/), for inspiration
