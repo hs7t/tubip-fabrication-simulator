@@ -8,7 +8,6 @@
 </script>
 
 {#snippet content()}
-    <h2>meow</h2>
 {/snippet}
 
-<Dialog {content} bind:shown={shown}></Dialog>
+<Dialog {content} title="Shop" bind:shown={shown}></Dialog>
