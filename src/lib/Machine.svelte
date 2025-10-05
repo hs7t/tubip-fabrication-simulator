@@ -1,12 +1,21 @@
 <script>
+  import { game } from "../gamestate.svelte";
+
     let { onEnter = undefined } = $props()
 </script>
 
 <div class="machine">
     <button onclick={onEnter}>FABRICATE</button>
+    <p>~{game.economy.generationQuantities.tubipPerClick} tubip/c</p>
 </div>
 
 <style>
+    .machine {
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+        align-items: center;
+    }
     button {
         font-size: 2em;
         background-color: var(--t-color-accent);
