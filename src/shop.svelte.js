@@ -38,12 +38,21 @@ export let items = {
   },
 };
 
+export function isItemAvailable(itemId) {
+  let item = items[itemId];
+  const coinsRemaining = game.state.coins - item.coinPrice;
+
+  if (coinsRemaining < 0) return false;
+  if (item.level.max == item.level.current) return false;
+
+  return true;
+}
+
 export function handleItemPurchase(itemId) {
   let item = items[itemId];
   const coinsRemaining = game.state.coins - item.coinPrice;
 
-  if (coinsRemaining < 0) return;
-  if (item.level.max == item.level.current) return;
+  if (!isItemAvailable(itemId)) return;
 
   game.state.coins = coinsRemaining;
   item.effect.actions.onStart();
