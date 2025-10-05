@@ -44,14 +44,16 @@ function fetchRandomNewsUpdate(source) {
   return source[Math.floor(Math.random() * source.length)];
 }
 
+export function updateNewsWithUpdate(newsUpdate) {
+  game.state.news.headline = newsUpdate.headline;
+  sendNewsUpdateEvent(newsUpdate);
+}
+
 export function updateNewsWithGeneric() {
   const fetchNewHeadline =
     Math.random() > 0.3 || game.state.news.headline == undefined;
   if (fetchNewHeadline == true) {
-    game.state.news.headline = fetchRandomNewsUpdate(
-      newsUpdates.generic
-    ).headline;
-    sendNewsUpdateEvent();
+    updateNewsWithUpdate(fetchRandomNewsUpdate(newsUpdates.generic));
   }
 }
 
