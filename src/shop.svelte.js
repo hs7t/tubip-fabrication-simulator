@@ -48,6 +48,7 @@ export let items = {
     effect: {
       actions: {
         onStart: () => {
+          sendEffectEvent("effectStart", "bribe");
           updateNewsWithUpdate(newsUpdates.itemRelated.bribe);
         },
         onEnd: () => {},
