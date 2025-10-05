@@ -1,6 +1,14 @@
 import { game } from "./gamestate.svelte";
 import { gameEvents } from "./gamestate.svelte";
 
+function sendHeadlineUpdateEvent() {
+  gameEvents.dispatchEvent(
+    new CustomEvent("headlineUpdate", {
+      detail: {},
+    })
+  );
+}
+
 let newsEvents = {
   generic: [
     {
@@ -23,6 +31,7 @@ export function updateNews() {
     Math.random() > 0.3 || game.state.news.headline == undefined;
   if (fetchNewHeadline == true) {
     game.state.news.headline = fetchRandomHeadline(newsEvents.generic).headline;
+    sendHeadlineUpdateEvent();
   }
 }
 
