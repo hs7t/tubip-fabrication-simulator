@@ -58,6 +58,28 @@ export let items = $state({
       ticksRemaining: undefined,
     },
   },
+  prayer: {
+    id: "prayer",
+    name: "Ceremony",
+    description: "Hold a ceremony for a chance at something greater.",
+    coinPrice: 20,
+    level: {
+      max: 1,
+      current: 0,
+    },
+    effect: {
+      actions: {
+        onStart: () => {
+          sendEffectEvent("effectStart", "prayer");
+          updateNewsWithUpdate(newsUpdates.itemRelated.prayer);
+        },
+        onEnd: () => {},
+      },
+      duration: undefined,
+      active: false,
+      ticksRemaining: undefined,
+    },
+  },
 });
 
 export function isItemAvailable(itemId) {
