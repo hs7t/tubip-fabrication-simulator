@@ -1,4 +1,4 @@
-import { game, gameEvents } from "./gamestate.svelte";
+import { game, gameEvents, registerAutoClicker } from "./gamestate.svelte";
 
 function sendEffectEvent(event, effectItemId) {
   gameEvents.dispatchEvent(
@@ -14,7 +14,7 @@ export let items = {
   dohlwropAutomator: {
     id: "dohlwropAutomator",
     name: "Dohlwrop Automator",
-    description: "Automates your clicks for a bit.",
+    description: "A wonderful automator for clicks.",
     coinPrice: 30,
     level: {
       max: 1,
@@ -24,14 +24,13 @@ export let items = {
       actions: {
         onStart: () => {
           sendEffectEvent("effectStart", "dohlwropAutomator");
-          game.economy.generationQuantities.tubipPerTick += 1;
+          registerAutoClicker(40, items["dohlwropAutomator"]);
         },
         onEnd: () => {
           sendEffectEvent("effectEnd", "dohlwropAutomator");
-          game.economy.generationQuantities.tubipPerTick -= 1;
         },
       },
-      duration: 40,
+      duration: undefined,
       active: false,
       ticksRemaining: undefined,
     },
