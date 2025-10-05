@@ -10,6 +10,9 @@ export let game = $state({
       headline: "It's a new dawn for tubip manufacturing!",
     },
     autoClickers: [],
+    ui: {
+      helpDialogNotShown: true,
+    },
   },
 
   economy: {
