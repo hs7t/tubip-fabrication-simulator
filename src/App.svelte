@@ -6,6 +6,7 @@
   import './news.svelte.js'
   import NewsMarquee from "./lib/NewsMarquee.svelte";
   import Stats from "./lib/Stats.svelte";
+  import Shop from "./lib/Shop.svelte";
 
   window.addEventListener("beforeunload", (e) => { saveGameToLocalStorage() })
 </script>
@@ -22,6 +23,8 @@
     <div class="market">
       <h2>Market</h2>
       <NumberInput buttonLabel="sell tubip" onEnter={(response) => { handleTubipSale(response) }} allowNegatives={false}></NumberInput>
+
+      <Shop />
     </div>
   </section>
   
