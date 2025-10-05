@@ -101,7 +101,7 @@ export function generateMatter(amount = 1) {
 }
 
 export function handleTubipSale(amount) {
-  let tubipResult = game.state.tubip - amount * game.economy.coinValues.tubip;
+  let tubipResult = Math.round(game.state.tubip - amount * game.economy.coinValues.tubip);
   if (tubipResult >= 0) {
     game.state.coins += amount;
     game.state.tubip = tubipResult;
