@@ -21,7 +21,8 @@ let newsUpdates = {
       },
     },
     {
-      headline: "Tubip companies on the rise. Is it a bubble?",
+      headline:
+        "Fears of tubip economy bubble grow as more companies on the rise",
       effect: () => {
         game.economy.generationQuantitiesStatic.matterPerTick += 0.5;
         game.economy.generationQuantitiesStatic.tubipPerClick -= 0.5;
