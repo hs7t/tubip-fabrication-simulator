@@ -38,6 +38,17 @@ export let items = {
   },
 };
 
+export function handleItemPurchase(itemId) {
+  let item = items[itemId];
+  const coinsRemaining = game.state.coins - item.coinPrice;
+
+  if (coinsRemaining < 0) return;
+  if (item.level.max == item.level.current) return;
+
+  game.state.coins = coinsRemaining;
+  item.effect.actions.onStart();
+}
+
 gameEvents.addEventListener("effectStart", (e) => {
   // @ts-ignore
   let itemId = e.detail.id;
