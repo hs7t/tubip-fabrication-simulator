@@ -1,5 +1,5 @@
 :root {
-  --t-color-primary: #333333;
+  --t-color-primary: #141414;
   --t-color-background: #e8e5da;
   --t-color-overlay-background: #ffffff;
   --t-color-overlay-primary: #333333;
@@ -50,7 +50,6 @@ button {
   font-family: inherit;
   background-color: var(--t-color-overlay-background);
   color: var(--t-color-overlay-primary);
-  border: var(--t-border-primary);
   border-radius: var(--t-radius-primary);
 }
 
@@ -60,6 +59,8 @@ button {
   transition: all 100ms;
   user-select: none;
   cursor: pointer;
+  border: solid 1.2pt var(--t-color-primary);
+  filter: drop-shadow(0 0.2rem 0.2rem rgba(0, 0, 0, 0.286));
 }
 
 button:focus,
