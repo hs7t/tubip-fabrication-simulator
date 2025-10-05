@@ -18,6 +18,8 @@
 
   --t-font-family-primary: "Work Sans", ui-sans-serif, sans-serif;
   --t-font-family-secondary: "Cascadia Code", ui-monospace, monospace;
+
+  --t-font-size-large: clamp(1rem, 6vw, 2.5rem);
 }
 
 * {

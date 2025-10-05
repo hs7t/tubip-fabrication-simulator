@@ -20,7 +20,7 @@
         align-items: center;
     }
     button {
-        font-size: 2em;
+        font-size: var(--t-font-size-large);
         background-color: var(--t-color-accent);
         color: var(--t-color-accent-contrast);
         border: solid var(--t-color-accent-dim) 3pt;
