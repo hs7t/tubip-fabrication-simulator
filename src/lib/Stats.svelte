@@ -10,7 +10,7 @@
     <div class="stat">
         <p>{stat}:</p>
         {#key game.state[stat]}
-            <p class="number" transition:slide>{game.state[stat]}</p>
+            <p class="number" transition:slide={{ axis: 'y' }}>{game.state[stat]}</p>
         {/key}
     </div>
     {/each}
