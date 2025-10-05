@@ -11,7 +11,7 @@ function sendNewsUpdateEvent(newsUpdate) {
   );
 }
 
-let newsUpdates = {
+export let newsUpdates = {
   generic: [
     {
       headline: "Acclaimed human's tubip mention sparks purchasing craze",
