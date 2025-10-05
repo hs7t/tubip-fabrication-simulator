@@ -1,7 +1,7 @@
 <script>
   import Machine from "./lib/Machine.svelte";
   import NumberInput from "./lib/components/NumberInput.svelte";
-  import { game, saveGameToLocalStorage, handleTubipGeneration, handleTubipSale } from "./gamestate.svelte.js";
+  import { game, saveGameToLocalStorage, handleTubipFabrication, handleTubipSale } from "./gamestate.svelte.js";
   import './tick.svelte.js'
   import './news.svelte.js'
   import NewsMarquee from "./lib/NewsMarquee.svelte";
@@ -35,7 +35,7 @@
   </section>
   
   <section id="economy">
-    <Machine onEnter={() => { handleTubipGeneration() }} />
+    <Machine onEnter={() => { handleTubipFabrication() }} />
   </section>
 
   <ShopDialog bind:shown={shopDialogShown}></ShopDialog>
