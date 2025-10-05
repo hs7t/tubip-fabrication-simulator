@@ -15,11 +15,15 @@ let newsUpdates = {
   generic: [
     {
       headline: "Acclaimed human's tubip mention sparks purchasing craze",
-      priceMultiplier: 1.2,
+      effect: () => {
+        game.economy.generationQuantitiesStatic.tubipPerClick += 0.2;
+      },
     },
     {
       headline: "Tubip companies on the rise. Is it a bubble?",
-      priceMultiplier: 0.8,
+      effect: () => {
+        game.economy.generationQuantitiesStatic.tubipPerClick -= 0.2;
+      },
     },
   ],
 };
@@ -45,4 +49,11 @@ gameEvents.addEventListener("tick", (e) => {
   if (ticks % 10 == 0) {
     updateNews();
   }
+});
+
+// News update effects
+gameEvents.addEventListener("newsUpdate", (e) => {
+  // @ts-ignore
+  const eventNewsUpdate = e.detail.newsUpdate;
+  eventNewsUpdate.effect()
 });
