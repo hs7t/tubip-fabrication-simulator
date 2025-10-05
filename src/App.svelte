@@ -8,7 +8,7 @@
   import Stats from "./lib/Stats.svelte";
   import ShopDialog from "./lib/ShopDialog.svelte";
 
-  let shopDialogShown = $state()
+  let shopDialogShown = $state(false)
 
   window.addEventListener("beforeunload", (e) => { saveGameToLocalStorage() })
 </script>
