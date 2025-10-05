@@ -17,7 +17,7 @@
 <div class="shop">
     <div class="items">
         {#each shopItems as item}
-            <button class="item" onclick={() => handleItemPurchase(item.id)} class:disabled={!(isItemAvailable(item.id))}>
+            <button class="item" onclick={() => handleItemPurchase(item.id)} disabled={!(isItemAvailable(item.id))}>
                 <span class="inline group item-info">
                     <p class="name">{item.name}</p>
                     <p class="level">({item.level.current}/{item.level.max})</p>
@@ -50,7 +50,7 @@
         background-color: var(--t-color-secondary-overlay-background);
     }
 
-    .item.disabled {
+    .item:disabled {
         background-color: inherit;
         background: repeating-linear-gradient(
             45deg,
@@ -59,6 +59,7 @@
             rgb(69, 69, 69) 15px,
             rgb(69, 69, 69) 16px
         );
+        cursor: default;
     }
 
     .item .name {
