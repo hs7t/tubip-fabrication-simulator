@@ -106,16 +106,15 @@ export function handleTubipSale(amount) {
   console.log("failed, " + tubipResult);
 }
 
-function handleTubipCreation() {
-  const matterResult = game.state.matter - game.economy.matterValues.tubip;
-  game.state.tubip += game.economy.generationQuantities.tubipPerClick;
-  game.state.matter = matterResult;
+function createTubip(amount) {
+  game.state.tubip += amount;
 }
 
 export function handleTubipFabrication() {
   const matterResult = game.state.matter - game.economy.matterValues.tubip;
   if (matterResult >= 0) {
-    handleTubipCreation();
+    createTubip(game.economy.generationQuantities.tubipPerClick);
+    game.state.matter = matterResult;
   }
 }
 
@@ -134,6 +133,8 @@ gameEvents.addEventListener("tick", (e) => {
 
     for (let autoClicker of game.state.autoClickers) {
       if (ticks % autoClicker.delay == 0) {
+        createTubip(game.economy.generationQuantities.tubipPerAutoClick);
+        console.log("Generated tubip automatically", autoClicker);
       }
     }
   }
