@@ -24,7 +24,7 @@ export let items = {
       actions: {
         onStart: () => {
           sendEffectEvent("effectStart", "dohlwropAutomator");
-          registerAutoClicker(40, items["dohlwropAutomator"]);
+          registerAutoClicker(2, items["dohlwropAutomator"]);
         },
         onEnd: () => {
           sendEffectEvent("effectEnd", "dohlwropAutomator");
