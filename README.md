@@ -7,4 +7,4 @@ A small game about fabricating tubip.
 - Tubip matter is needed for fabrication. You'll get every so often - watch the counters!
 - You can sell tubip for coins on the Market.
 - Coins can be used to buy upgrades that might help you fabricate more tubip.
-- Keep an eye on the news ticker! Prices and fabrication efficiency fluctuate based on recent events (and also randomly).
+- Keep an eye on the news ticker! Efficiency and exchange rates fluctuate based on recent events (and also randomly).
