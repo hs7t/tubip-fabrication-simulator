@@ -7,8 +7,10 @@
   import NewsMarquee from "./lib/NewsMarquee.svelte";
   import Stats from "./lib/Stats.svelte";
   import ShopDialog from "./lib/ShopDialog.svelte";
+  import SaleDialog from "./lib/SaleDialog.svelte";
 
   let shopDialogShown = $state(false)
+  let saleDialogShown = $state(false)
 
   window.addEventListener("beforeunload", (e) => { saveGameToLocalStorage() })
 </script>
@@ -24,7 +26,7 @@
 
     <div class="market">
       <h2>Market</h2>
-      <NumberInput buttonLabel="sell tubip" onEnter={(response) => { handleTubipSale(response) }} allowNegatives={false}></NumberInput>
+      <button onclick={() => { saleDialogShown = true}}>Sell</button>
     </div>
 
     <button onclick={() => { shopDialogShown = true}}>Visit the Shop</button>
@@ -35,6 +37,7 @@
   </section>
 
   <ShopDialog bind:shown={shopDialogShown}></ShopDialog>
+  <SaleDialog bind:shown={saleDialogShown}></SaleDialog>
 </main>
 
 <style>
