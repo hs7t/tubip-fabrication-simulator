@@ -28,6 +28,11 @@ export let newsUpdates = {
         game.economy.generationQuantitiesStatic.tubipPerClick -= 0.5;
       },
     },
+    {
+      headline:
+        "'I'm so tired' says TFS dev after reaching 15 hours executing initially silly idea",
+      effect: () => {},
+    },
   ],
   itemRelated: {
     bribe: {
