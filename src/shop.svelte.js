@@ -1,4 +1,5 @@
 import { game, gameEvents, registerAutoClicker } from "./gamestate.svelte";
+import { newsUpdates, updateNewsWithUpdate } from "./news.svelte";
 
 function sendEffectEvent(event, effectItemId) {
   gameEvents.dispatchEvent(
@@ -29,6 +30,27 @@ export let items = {
         onEnd: () => {
           sendEffectEvent("effectEnd", "dohlwropAutomator");
         },
+      },
+      duration: undefined,
+      active: false,
+      ticksRemaining: undefined,
+    },
+  },
+  bribe: {
+    id: "bribe",
+    name: "Lobbying",
+    description: "Gift an important person a nice beach vacation.",
+    coinPrice: 10,
+    level: {
+      max: 1,
+      current: 0,
+    },
+    effect: {
+      actions: {
+        onStart: () => {
+          updateNewsWithUpdate(newsUpdates.itemRelated.bribe);
+        },
+        onEnd: () => {},
       },
       duration: undefined,
       active: false,
