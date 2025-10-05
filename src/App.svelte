@@ -26,10 +26,12 @@
 
     <div class="market">
       <h2>Market</h2>
-      <button onclick={() => { saleDialogShown = true}}>Sell</button>
+      <div class="buttonGroup">
+        <button onclick={() => { saleDialogShown = true}}>Sell</button>
+        <button onclick={() => { shopDialogShown = true}}>Visit the Shop</button>
+      </div>
     </div>
 
-    <button onclick={() => { shopDialogShown = true}}>Visit the Shop</button>
   </section>
   
   <section id="economy">
@@ -84,5 +86,15 @@
   #economy {
     justify-content: center;
     align-items: center;
+  }
+
+  .market .buttonGroup {
+    display: flex;
+    flex-direction: row;
+    gap: 0.5rem;
+  }
+
+  .market .buttonGroup button {
+    flex-grow: 1;
   }
 </style>
