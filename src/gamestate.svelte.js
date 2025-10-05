@@ -148,7 +148,7 @@ export function registerAutoClicker(tickDelay, sourceItem = undefined) {
 export function calculateTubipPerTick(autoClickerArray) {
   let tubipPerTick = 0;
   for (let autoClicker of autoClickerArray) {
-    tubipPerTick += 1 / autoClicker.tickDelay;
+    tubipPerTick += 1 / autoClicker.delay;
   }
   return tubipPerTick;
 }
