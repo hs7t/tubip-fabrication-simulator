@@ -12,3 +12,11 @@
         return objectItems;
     }
 </script>
+
+<div>
+    <ul>
+        {#each shopItems as item}
+            <li>{item.name}</li>
+        {/each}
+    </ul>
+</div>
