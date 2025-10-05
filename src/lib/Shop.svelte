@@ -20,7 +20,7 @@
             <button class="item" onclick={() => handleItemPurchase(item.id)} disabled={!(isItemAvailable(item.id))}>
                 <span class="inline group item-info">
                     <p class="name">{item.name}</p>
-                    <p class="level">({item.level.current}/{item.level.max})</p>
+                    <p class="level">(max {item.level.max})</p>
                 </span>
                 <p class="description">{item.description}</p>
                 <p class="price">{item.coinPrice} coins</p>
