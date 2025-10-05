@@ -15,8 +15,8 @@ export let game = $state({
     randomness: 0.5,
     generationQuantities: {},
     generationQuantitiesStatic: {
-      tubipPerClick: 1,
-      tubipPerTick: 2,
+      tubipPerClick: 2,
+      tubipPerTick: 0,
       matterPerTick: 1,
     },
     effects: {},
