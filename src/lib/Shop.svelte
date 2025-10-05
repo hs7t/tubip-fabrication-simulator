@@ -1,5 +1,5 @@
 <script>
-    import { handleItemPurchase, items } from "../shop.svelte.js";
+    import { handleItemPurchase, isItemAvailable, items } from "../shop.svelte.js";
 
     let shopItems = $derived(arrayFromObject(items))
 
@@ -11,12 +11,13 @@
         }
         return objectItems;
     }
+
 </script>
 
 <div class="shop">
     <div class="items">
         {#each shopItems as item}
-            <button class="item" onclick={() => handleItemPurchase(item.id)}>
+            <button class="item" onclick={() => handleItemPurchase(item.id)} class:disabled={!(isItemAvailable(item.id))}>
                 <span class="inline group item-info">
                     <p class="name">{item.name}</p>
                     <p class="level">({item.level.current}/{item.level.max})</p>
@@ -46,8 +47,20 @@
 
         cursor: pointer;
         border: var(--t-border-primary);
-        background-color: var(--t-secondary-overlay-background);
+        background-color: var(--t-color-secondary-overlay-background);
     }
+
+    .item.disabled {
+        background-color: inherit;
+        background: repeating-linear-gradient(
+            45deg,
+            transparent,
+            transparent 15px,
+            rgb(69, 69, 69) 15px,
+            rgb(69, 69, 69) 16px
+        );
+    }
+
     .item .name {
         font-weight: 600;
     }
