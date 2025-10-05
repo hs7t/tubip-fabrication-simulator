@@ -8,7 +8,6 @@
 </script>
 
 {#snippet content()}
-    <button onclick={() => makeShown(false)}>Close</button>
     <h2>meow</h2>
 {/snippet}
 

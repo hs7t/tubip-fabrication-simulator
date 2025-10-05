@@ -1,5 +1,5 @@
 <script>
-    let { content, shown = $bindable() } = $props()
+    let { content, title = "Dialog", shown = $bindable() } = $props()
     let dialogReference
     
     $effect(() => {
@@ -12,6 +12,10 @@
 </script>
 
 <dialog bind:this={dialogReference} onclose={() => shown = false} closedby="any">
+    <nav>
+        <h2>{title}</h2>
+        <button id="close-button" onclick={() => { shown = false }}>Close</button>
+    </nav>
     {@render content()}
 </dialog>
 
@@ -57,16 +61,18 @@
         opacity: 0.5;
     }
 
-    @keyframes backdropEnter {
-        0% {
-            opacity: 1;
-        }
-        80% {
-            opacity: 1;
-        }
-        100% {
-            opacity: 0.5;
-        }
+    dialog nav {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    dialog nav h2 {
+        font-size: 1.5rem;
+    }
+
+    #close-button {
+        align-self: flex-end;
     }
 
     ul {
