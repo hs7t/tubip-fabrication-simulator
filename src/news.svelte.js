@@ -40,6 +40,44 @@ export let newsUpdates = {
         game.economy.generationQuantitiesStatic.matterPerTick += 0.5;
       },
     },
+    {
+      headline:
+        "'We must pretend they are a good quantity and well written enough', says President about headlines",
+      effect: () => {},
+    },
+    {
+      headline:
+        "Major tubip matter holding corporation shuts down, liquidates assets after financial scandal",
+      effect: () => {
+        game.economy.generationQuantitiesStatic.matterPerTick += 1;
+      },
+    },
+    {
+      headline:
+        "Government imposes tariff on foreign tubip in efforts to protect national industry",
+      effect: () => {
+        game.economy.coinValues.tubip += 1;
+      },
+    },
+    {
+      headline:
+        "Health professionals warn against dangerous tubip-destroying trend: 'A slippery slope to oblivion'",
+      effect: () => {
+        game.economy.coinValues.tubip += 0.2;
+      },
+    },
+    {
+      headline:
+        "Scientists exploring tubip usage in recent high-stakes research",
+      effect: () => {
+        game.economy.coinValues.tubip += 0.2;
+      },
+    },
+    {
+      headline:
+        "Benefits found to acknowledging tubips for at least three hours a day",
+      effect: () => {},
+    },
   ],
   itemRelated: {
     bribe: {
