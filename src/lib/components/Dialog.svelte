@@ -11,7 +11,7 @@
     })
 </script>
 
-<dialog bind:this={dialogReference} closedby="any">
+<dialog bind:this={dialogReference} onclose={() => shown = false} closedby="any">
     {@render content()}
 </dialog>
 
