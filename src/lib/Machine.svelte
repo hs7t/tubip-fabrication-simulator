@@ -6,7 +6,7 @@
 
 <div class="machine">
     <button onclick={onEnter}>FABRICATE</button>
-    <p>~{game.economy.generationQuantities.tubipPerClick} tubip/c</p>
+    <p>yields ~{game.economy.generationQuantities.tubipPerClick} tubip</p>
 </div>
 
 <style>
