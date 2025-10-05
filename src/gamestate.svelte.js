@@ -31,6 +31,7 @@ export let game = $state({
   },
 });
 
+
 game.economy.generationQuantities = {
   // starting values, just in case; should be $derived() from randomizer function by ticker
   tubipPerClick: game.economy.generationQuantitiesStatic.tubipPerClick,
@@ -142,6 +143,14 @@ gameEvents.addEventListener("tick", (e) => {
 
 export function registerAutoClicker(tickDelay, sourceItem = undefined) {
   game.state.autoClickers.push({ delay: tickDelay, sourceItem: sourceItem });
+}
+
+export function calculateTubipPerTick(autoClickerArray) {
+  let tubipPerTick = 0;
+  for (let autoClicker of autoClickerArray) {
+    tubipPerTick += 1 / autoClicker.tickDelay;
+  }
+  return tubipPerTick;
 }
 
 loadGame();
