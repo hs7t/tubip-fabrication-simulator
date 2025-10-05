@@ -17,7 +17,12 @@
     <div class="items">
         {#each shopItems as item}
             <button class="item" onclick={() => handleItemPurchase(item.id)}>
-                <p class="name">{item.name}</p>
+                <span class="inline group item-info">
+                    <p class="name">{item.name}</p>
+                    <p class="level">({item.level.current}/{item.level.max})</p>
+                </span>
+                <p class="description">{item.description}</p>
+                <p class="price">{item.coinPrice} coins</p>
             </button>
         {/each}
     </div>
@@ -34,11 +39,26 @@
     }
     .item {
         all: unset;
-        cursor: pointer;
         padding: 0.8ch;
+        display: flex;
+        flex-direction: column;
+        gap: 0.2em;
+
+        cursor: pointer;
         border: var(--t-border-primary);
+        background-color: var(--t-secondary-overlay-background);
     }
     .item .name {
         font-weight: 600;
+    }
+    .item .price {
+        font-style: italic;
+        align-self: flex-end;
+    }
+    .group.inline {
+        display: flex;
+        gap: 1ch;
+        flex-direction: row;
+        flex-wrap: wrap;
     }
 </style>
