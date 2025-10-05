@@ -26,6 +26,8 @@
       <h2>Market</h2>
       <NumberInput buttonLabel="sell tubip" onEnter={(response) => { handleTubipSale(response) }} allowNegatives={false}></NumberInput>
     </div>
+
+    <button onclick={() => { shopDialogShown = true}}>Visit the Shop</button>
   </section>
   
   <section id="economy">
