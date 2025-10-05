@@ -1,10 +1,12 @@
 <script>
     import { game } from "../gamestate.svelte";
     import { slide } from "svelte/transition";
+
+    let { statsShown = ["coins", "tubip", "matter"] } = $props()
 </script>
 
 <div class="stats">
-    {#each ["coins", "tubip", "matter"] as stat}
+    {#each statsShown as stat}
     <div class="stat">
         <p>{stat}:</p>
         {#key game.state[stat]}
