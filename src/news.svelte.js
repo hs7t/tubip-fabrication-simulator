@@ -29,6 +29,15 @@ let newsUpdates = {
       },
     },
   ],
+  itemRelated: {
+    bribe: {
+      headline:
+        "Senator pushes bill with sweeping changes to tubip industry regulation",
+      effect: () => {
+        game.economy.generationQuantitiesStatic.tubipPerClick += 2;
+      },
+    },
+  },
 };
 
 function fetchRandomNewsUpdate(source) {
