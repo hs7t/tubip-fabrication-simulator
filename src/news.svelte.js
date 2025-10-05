@@ -33,6 +33,11 @@ export let newsUpdates = {
         "'I'm so tired' says TFS dev after reaching 15 hours executing initially silly idea",
       effect: () => {},
     },
+    {
+      headline:
+        "Jort Company launches 'Shorts', jorts made out of non-jean material",
+      effect: () => {},
+    },
   ],
   itemRelated: {
     bribe: {
