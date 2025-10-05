@@ -10,7 +10,6 @@ A small game about fabricating tubip.
 - Keep an eye on the news ticker! Efficiency and exchange rates fluctuate based on recent events (and also randomly).
 
 ## Running TFS yourself
-
 Tubip Fabrication Simulator is written using Svelte and Vite, with no extra backend. To run it, do:
 
 ```bash
@@ -26,3 +25,14 @@ npm run build
 ...to get a built version at `/dist` - you can deploy it anywhere!
 
 This repo also contains a [workflow for GitHub Pages](./.github/workflows/publish.yaml), if that helps.
+
+## Credits
+
+### Tech used
+- [Svelte](https://svelte.dev/), as always <3
+- [Vite](https://vite.dev/)!
+- [Work Sans](https://github.com/weiweihuanghuang/Work-Sans), a great font
+- [Google Fonts](https://fonts.google.com/) (I can't be bothered to self host fonts)
+
+### And more!
+- [Ryan Mulligan](https://ryanmulligan.dev/)'s [awesome guide](https://ryanmulligan.dev/blog/css-marquee/) on designing CSS-based marquees
