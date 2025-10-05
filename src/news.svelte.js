@@ -1,17 +1,17 @@
 import { game } from "./gamestate.svelte";
 import { gameEvents } from "./gamestate.svelte";
 
-function sendNewsUpdateEvent(newsEvent) {
+function sendNewsUpdateEvent(newsUpdate) {
   gameEvents.dispatchEvent(
     new CustomEvent("newsUpdate", {
       detail: {
-        newsEvent: newsEvent,
+        newsUpdate: newsUpdate,
       },
     })
   );
 }
 
-let newsEvents = {
+let newsUpdates = {
   generic: [
     {
       headline: "Acclaimed human's tubip mention sparks purchasing craze",
@@ -24,7 +24,7 @@ let newsEvents = {
   ],
 };
 
-function fetchRandomHeadline(source) {
+function fetchRandomNewsUpdate(source) {
   return source[Math.floor(Math.random() * source.length)];
 }
 
@@ -32,7 +32,9 @@ export function updateNews() {
   const fetchNewHeadline =
     Math.random() > 0.3 || game.state.news.headline == undefined;
   if (fetchNewHeadline == true) {
-    game.state.news.headline = fetchRandomHeadline(newsEvents.generic).headline;
+    game.state.news.headline = fetchRandomNewsUpdate(
+      newsUpdates.generic
+    ).headline;
     sendNewsUpdateEvent();
   }
 }
