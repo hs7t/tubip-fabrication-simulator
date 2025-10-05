@@ -14,7 +14,7 @@ export let items = {
   dohlwropAutomator: {
     id: "dohlwropAutomator",
     name: "Dohlwrop Automator",
-    description: "A wonderful automator for clicks.",
+    description: "Derives tubip from thin air.",
     coinPrice: 30,
     level: {
       max: 1,
