@@ -17,11 +17,13 @@ let newsUpdates = {
       headline: "Acclaimed human's tubip mention sparks purchasing craze",
       effect: () => {
         game.economy.generationQuantitiesStatic.tubipPerClick += 0.2;
+        game.economy.generationQuantitiesStatic.matterPerTick -= 0.2;
       },
     },
     {
       headline: "Tubip companies on the rise. Is it a bubble?",
       effect: () => {
+        game.economy.generationQuantitiesStatic.matterPerTick += 0.2;
         game.economy.generationQuantitiesStatic.tubipPerClick -= 0.2;
       },
     },
