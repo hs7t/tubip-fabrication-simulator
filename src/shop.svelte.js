@@ -11,7 +11,7 @@ function sendEffectEvent(event, effectItemId) {
   );
 }
 
-export let items = {
+export let items = $state({
   dohlwropAutomator: {
     id: "dohlwropAutomator",
     name: "Dohlwrop Automator",
@@ -58,7 +58,7 @@ export let items = {
       ticksRemaining: undefined,
     },
   },
-};
+});
 
 export function isItemAvailable(itemId) {
   let item = items[itemId];
