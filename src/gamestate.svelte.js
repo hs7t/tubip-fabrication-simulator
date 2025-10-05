@@ -82,7 +82,7 @@ function loadGame() {
 }
 
 function randomizeInteger(integer, randomness) {
-  return Math.floor(integer * (1 + (Math.random() - 0.5) * randomness));
+  return Math.round(integer * (1 + (Math.random() - 0.5) * randomness));
 }
 
 export function fluctuateEconomy() {
@@ -111,7 +111,7 @@ export function handleTubipSale(amount) {
 }
 
 function createTubip(amount) {
-  game.state.tubip += amount;
+  game.state.tubip = Math.round(game.state.tubip) + amount;
 }
 
 export function handleTubipFabrication() {
