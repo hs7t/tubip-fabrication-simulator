@@ -59,7 +59,7 @@ gameEvents.addEventListener("effectEnd", (e) => {
 });
 
 gameEvents.addEventListener("tick", () => {
-  for (let itemKey in items.keys()) {
+  for (let itemKey in Object.keys(items)) {
     if ((items[itemKey].active = false)) break;
 
     const effectTicksRemaining = items[itemKey].effect.ticksRemaining;
