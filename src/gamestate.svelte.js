@@ -111,7 +111,7 @@ export function handleTubipSale(amount) {
 }
 
 function createTubip(amount) {
-  game.state.tubip = Math.round(game.state.tubip) + amount;
+  game.state.tubip = Math.round(game.state.tubip + amount);
 }
 
 export function handleTubipFabrication() {
