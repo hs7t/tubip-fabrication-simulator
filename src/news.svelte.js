@@ -36,7 +36,9 @@ export let newsUpdates = {
     {
       headline:
         "Jort Company launches 'Shorts', jorts made out of non-jean material",
-      effect: () => {},
+      effect: () => {
+        game.economy.generationQuantitiesStatic.matterPerTick += 0.5;
+      },
     },
   ],
   itemRelated: {
