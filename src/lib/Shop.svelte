@@ -53,6 +53,10 @@
         transition: all 100ms;
     }
 
+    .item:hover {
+        transform: scale(0.98);
+    }
+
     .item:active {
         transform: rotate(-2deg) scale(1.05);
         font-weight: 600;
