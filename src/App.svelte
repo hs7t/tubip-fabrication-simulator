@@ -14,6 +14,11 @@
   let saleDialogShown = $state(false)
   let helpDialogShown = $state(game.state.ui.helpDialogNotShown)
 
+  $effect(() => {
+    console.log("helpdialogshown", helpDialogShown)
+    game.state.ui.helpDialogNotShown = helpDialogShown
+  })
+
   window.addEventListener("beforeunload", (e) => { saveGameToLocalStorage() })
 </script>
 

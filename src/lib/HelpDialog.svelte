@@ -1,6 +1,6 @@
 <script>
   import Dialog from "./components/Dialog.svelte";
-    let { open = $bindable(true) } = $props();
+    let { shown = $bindable(true) } = $props();
 </script>
 
 {#snippet content()}
@@ -13,4 +13,4 @@
 </ul>
 {/snippet}
 
-<Dialog {content} shown={open} title="How to play"></Dialog>
+<Dialog {content} bind:shown={shown} title="How to play"></Dialog>
