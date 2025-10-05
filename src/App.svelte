@@ -1,6 +1,6 @@
 <script>
   import Machine from "./lib/Machine.svelte";
-  import NumberInput from "./lib/NumberInput.svelte";
+  import NumberInput from "./lib/gen/NumberInput.svelte";
   import { game, saveGameToLocalStorage, handleTubipGeneration, handleTubipSale } from "./gamestate.svelte.js";
   import './tick.svelte.js'
   import './news.svelte.js'
