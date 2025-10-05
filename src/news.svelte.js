@@ -87,6 +87,18 @@ export let newsUpdates = {
         game.economy.generationQuantitiesStatic.tubipPerClick += 2;
       },
     },
+    prayer: {
+      headline:
+        "Tubip manufacturer resorts to gnostic knowledge to increase value",
+      effect: () => {
+        const prayerHeard = Math.random() > 0.5;
+        if (prayerHeard) {
+          // 50% increase
+          game.economy.generationQuantitiesStatic.matterPerTick +=
+            game.economy.generationQuantitiesStatic.matterPerTick / 2;
+        }
+      },
+    },
   },
 };
 
