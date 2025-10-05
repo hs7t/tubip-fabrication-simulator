@@ -64,7 +64,7 @@
   section {
     display: flex;
     flex-direction: column;
-    min-width: 20vw;
+    min-width: 20dvw;
     flex: 1 1 400px;
 
     padding: 1em;
