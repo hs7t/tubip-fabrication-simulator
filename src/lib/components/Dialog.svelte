@@ -36,6 +36,9 @@
         animation-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
         transition-behavior: allow-discrete;
         transition: all 100ms;
+
+        align-self: center;
+        justify-self: center;
     }
 
     dialog:focus {
