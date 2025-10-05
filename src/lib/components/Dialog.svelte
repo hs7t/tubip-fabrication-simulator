@@ -31,6 +31,7 @@
         border: var(--t-border-primary);
         border-radius: var(--t-radius-large);
         background-color: var(--t-color-overlay-background);
+        color: var(--t-color-overlay-primary);
 
         animation: 400ms dialogEnter;
         animation-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
