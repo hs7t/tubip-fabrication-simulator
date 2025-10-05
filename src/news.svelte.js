@@ -30,7 +30,7 @@ export let newsUpdates = {
     },
     {
       headline:
-        "'I'm so tired' says TFS dev after reaching 15 hours executing initially silly idea",
+        "'I'm so tired' pleads TFS dev after reaching 15 hours executing initially silly idea",
       effect: () => {},
     },
     {
