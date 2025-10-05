@@ -27,6 +27,10 @@
   tap-highlight-color: transparent;
 }
 
+p, h1, h2, h3, h4 {
+  user-select: none;
+}
+
 body {
   background-color: var(--t-color-background);
 
