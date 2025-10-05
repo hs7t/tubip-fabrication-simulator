@@ -48,6 +48,9 @@
         cursor: pointer;
         border: var(--t-border-primary);
         background-color: var(--t-color-secondary-overlay-background);
+        border-radius: var(--t-radius-primary);
+
+        transition: all 100ms;
     }
 
     .item:disabled {
@@ -60,6 +63,12 @@
             rgb(69, 69, 69) 16px
         );
         cursor: default;
+    }
+
+    .item:disabled:active {
+        transform: none;
+        outline: var(--t-border-secondary);
+        outline-offset: 0.2em;
     }
 
     .item .name {
