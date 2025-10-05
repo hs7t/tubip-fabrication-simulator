@@ -3,6 +3,9 @@
   --t-color-background: #e8e5da;
   --t-color-overlay-background: #ffffff;
   --t-color-overlay-primary: #333333;
+  --t-color-secondary-overlay-background: #fff4bb;
+  --t-color-secondary-overlay-primary: var(--t-color-primary);
+
   --t-color-accent: #d42121;
   --t-color-accent-dim: #9f1919;
   --t-color-accent-contrast: rgb(255, 246, 246);
