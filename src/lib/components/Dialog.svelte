@@ -26,7 +26,7 @@
         font-size: inherit;
         border: var(--t-border-primary);
         border-radius: var(--t-radius-large);
-        background-color: var(--v-color-overlay-backfround);
+        background-color: var(--t-color-overlay-background);
 
         animation: 400ms dialogEnter;
         animation-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
