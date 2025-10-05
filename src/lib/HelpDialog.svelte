@@ -13,4 +13,4 @@
 </ul>
 {/snippet}
 
-<Dialog {content} shown={open}></Dialog>
+<Dialog {content} shown={open} title="How to play"></Dialog>
