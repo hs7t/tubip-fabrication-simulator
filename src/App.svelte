@@ -6,7 +6,9 @@
   import './news.svelte.js'
   import NewsMarquee from "./lib/NewsMarquee.svelte";
   import Stats from "./lib/Stats.svelte";
-  import Shop from "./lib/Shop.svelte";
+  import ShopDialog from "./lib/ShopDialog.svelte";
+
+  let shopDialogShown = $state()
 
   window.addEventListener("beforeunload", (e) => { saveGameToLocalStorage() })
 </script>
@@ -23,14 +25,14 @@
     <div class="market">
       <h2>Market</h2>
       <NumberInput buttonLabel="sell tubip" onEnter={(response) => { handleTubipSale(response) }} allowNegatives={false}></NumberInput>
-
-      <Shop />
     </div>
   </section>
   
   <section id="economy">
     <Machine onEnter={() => { handleTubipGeneration() }} />
   </section>
+
+  <ShopDialog bind:shown={shopDialogShown}></ShopDialog>
 </main>
 
 <style>
