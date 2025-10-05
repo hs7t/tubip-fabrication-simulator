@@ -8,9 +8,11 @@
   import Stats from "./lib/Stats.svelte";
   import ShopDialog from "./lib/ShopDialog.svelte";
   import SaleDialog from "./lib/SaleDialog.svelte";
+  import HelpDialog from "./lib/HelpDialog.svelte";
 
   let shopDialogShown = $state(false)
   let saleDialogShown = $state(false)
+  let helpDialogShown = $state(true)
 
   window.addEventListener("beforeunload", (e) => { saveGameToLocalStorage() })
 </script>
@@ -40,6 +42,7 @@
 
   <ShopDialog bind:shown={shopDialogShown}></ShopDialog>
   <SaleDialog bind:shown={saleDialogShown}></SaleDialog>
+  <HelpDialog bind:shown={helpDialogShown}></HelpDialog>
 </main>
 
 <style>

@@ -1,6 +1,6 @@
 <script>
   import Dialog from "./components/Dialog.svelte";
-    let { open = true } = $props();
+    let { open = $bindable(true) } = $props();
 </script>
 
 {#snippet content()}
