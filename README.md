@@ -26,6 +26,10 @@ npm run build
 
 This repo also contains a [workflow for GitHub Pages](./.github/workflows/publish.yaml), if that helps.
 
+## License
+
+The code in this repo is licenced under the MIT licence, available [here](./LICENSE).
+
 ## Credits
 
 ### Tech used
