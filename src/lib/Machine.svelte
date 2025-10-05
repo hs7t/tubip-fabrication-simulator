@@ -1,5 +1,5 @@
 <script>
-  import { game } from "../gamestate.svelte";
+  import { calculateTubipPerTick, game } from "../gamestate.svelte";
 
     let { onEnter = undefined } = $props()
 </script>
@@ -7,6 +7,9 @@
 <div class="machine">
     <button onclick={onEnter}>FABRICATE</button>
     <p>yields ~{game.economy.generationQuantities.tubipPerClick} tubip</p>
+    {#if game.state.autoClickers.length > 0} 
+        <p>deriving {calculateTubipPerTick(game.state.autoClickers)} tubip/t</p>
+    {/if}
 </div>
 
 <style>
