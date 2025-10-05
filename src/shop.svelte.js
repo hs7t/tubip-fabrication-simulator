@@ -80,6 +80,28 @@ export let items = $state({
       ticksRemaining: undefined,
     },
   },
+  newspaper: {
+    id: "newspaper",
+    name: "Acquisition",
+    description: "Acquire a news conglomerate.",
+    coinPrice: 60,
+    level: {
+      max: 1,
+      current: 0,
+    },
+    effect: {
+      actions: {
+        onStart: () => {
+          sendEffectEvent("effectStart", "newspaper");
+          updateNewsWithUpdate(newsUpdates.itemRelated.newspaper);
+        },
+        onEnd: () => {},
+      },
+      duration: undefined,
+      active: false,
+      ticksRemaining: undefined,
+    },
+  },
 });
 
 export function isItemAvailable(itemId) {

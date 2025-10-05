@@ -99,6 +99,13 @@ export let newsUpdates = {
         }
       },
     },
+    newspaper: {
+      headline:
+        "News conglomerate acquired by tubip magnate: 'We remain committed our journalistic standards and fearless, independent journalism', remarks CEO at ceremony recommending tubip 'Investment of the year'",
+      effect: () => {
+        game.economy.coinValues.tubip += 5;
+      },
+    },
   },
 };
 
