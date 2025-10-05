@@ -54,6 +54,7 @@
     padding: 5%;
     width: clamp(280px, 100%, 1200px);
     align-items: center;
+    justify-content: center;
 
     margin: auto;
 
