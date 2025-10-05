@@ -49,8 +49,8 @@ export let items = $state({
       actions: {
         onStart: () => {
           sendEffectEvent("effectStart", "refiner");
-          game.economy.generationQuantitiesStatic.tubipPerClick += Math.abs(
-            game.economy.generationQuantitiesStatic.tubipPerClick / 2
+          game.economy.generationQuantitiesStatic.tubipPerClick += Math.floor(
+            Math.abs(game.economy.generationQuantitiesStatic.tubipPerClick / 2)
           );
         },
         onEnd: () => {
