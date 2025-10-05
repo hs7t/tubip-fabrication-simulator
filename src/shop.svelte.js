@@ -36,6 +36,33 @@ export let items = $state({
       ticksRemaining: undefined,
     },
   },
+  refiner: {
+    id: "refiner",
+    name: "TQ-1200 Enhanced Refining Instrument",
+    description: "Improves fabrication efficiency.",
+    coinPrice: 50,
+    level: {
+      max: 1,
+      current: 0,
+    },
+    effect: {
+      actions: {
+        onStart: () => {
+          sendEffectEvent("effectStart", "refiner");
+          game.economy.generationQuantitiesStatic.tubipPerClick += Math.abs(
+            game.economy.generationQuantitiesStatic.tubipPerClick / 2
+          );
+        },
+        onEnd: () => {
+          sendEffectEvent("effectEnd", "refiner");
+        },
+      },
+      duration: undefined,
+      active: false,
+      ticksRemaining: undefined,
+    },
+  },
+
   bribe: {
     id: "bribe",
     name: "Lobbying",
