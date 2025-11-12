@@ -1,14 +1,17 @@
 :root {
   --t-color-primary: #141414;
-  --t-color-background: #e8e5da;
+  --t-color-background: #FFF5ED;
   --t-color-overlay-background: #ffffff;
   --t-color-overlay-primary: #333333;
   --t-color-secondary-overlay-background: #fff4bb;
   --t-color-secondary-overlay-primary: var(--t-color-primary);
 
-  --t-color-accent: #d42121;
-  --t-color-accent-dim: #9f1919;
-  --t-color-accent-contrast: rgb(255, 246, 246);
+  --t-color-accent-A: #FF80DF; /* "Magenta" (in quotes) */
+  --t-color-accent-B: #FFE226; /* Yellow */
+  --t-color-accent-C: #5CB8FF; /* Cyan */
+
+  --t-color-accent-background-A: #4D4139; /* Dirt */
+  --t-color-accent-background-B: #394D3E; /* Chalkboard */
 
   --t-border-primary: solid 1pt var(--t-color-primary);
   --t-border-secondary: dashed 1pt var(--t-color-primary);
