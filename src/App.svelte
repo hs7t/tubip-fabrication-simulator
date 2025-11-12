@@ -9,6 +9,7 @@
   import ShopDialog from "./lib/ShopDialog.svelte";
   import SaleDialog from "./lib/SaleDialog.svelte";
   import HelpDialog from "./lib/HelpDialog.svelte";
+  import InfoBox from "./lib/InfoBox.svelte";
 
   let shopDialogShown = $state(false)
   let saleDialogShown = $state(false)
@@ -23,23 +24,16 @@
 </script>
 
 <main>
-  <section id="overview">
-    <NewsMarquee headline={game.state.news.headline}/>
-
-    <div class="infobox">
-      <h1>Tubip Fabrication Simulator</h1>  
-      <Stats />
+  <InfoBox />
+  <!--
+  <div class="market">
+    <h2>Market</h2>
+    <div class="buttonGroup">
+      <button onclick={() => { saleDialogShown = true}}>Sell</button>
+      <button onclick={() => { shopDialogShown = true}}>Visit the Shop</button>
     </div>
-
-    <div class="market">
-      <h2>Market</h2>
-      <div class="buttonGroup">
-        <button onclick={() => { saleDialogShown = true}}>Sell</button>
-        <button onclick={() => { shopDialogShown = true}}>Visit the Shop</button>
-      </div>
-    </div>
-
-  </section>
+  </div>
+  -->
   
   <section id="economy">
     <Machine onEnter={() => { handleTubipFabrication() }} />
