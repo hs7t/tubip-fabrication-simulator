@@ -16,7 +16,6 @@
   --t-radius-large: 0pt;
 
   --t-font-family-primary: "Red Hat Mono", monospace;
-  --t-font-family-secondary: var(--t-font-family-primary);
 
   --t-font-size-large: clamp(1rem, 6vw, 2.5rem);
 }

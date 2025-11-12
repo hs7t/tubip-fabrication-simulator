@@ -5,11 +5,9 @@
 </script>
 
 <div class="machine">
-    <button onclick={onEnter}>FABRICATE</button>
-    <p>yields ~{game.economy.generationQuantities.tubipPerClick} tubip</p>
-    {#if game.state.autoClickers.length > 0} 
-        <p>deriving {calculateTubipPerTick(game.state.autoClickers)} tubip/t</p>
-    {/if}
+    <button onclick={onEnter}>
+        FABRICATE
+    </button>
 </div>
 
 <style>
@@ -21,11 +19,11 @@
     }
     button {
         font-size: var(--t-font-size-large);
-        background-color: var(--t-color-accent);
-        color: var(--t-color-accent-contrast);
-        border: solid var(--t-color-accent-dim) 3pt;
-        border-radius: 8pt;
-        box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.25) inset, 0 0 5.7px 0;
+        background-color: var(--t-color-accent-B);
+        color: var(--t-color-primary);
+        border: solid var(--t-color-accent-C) 3pt;
+        border-radius: var(--t-radius-primary);
+        box-shadow: 0px 0.5rem 0px var(--t-color-accent-A);
         font-weight: 700;
         transition: all 200ms;
     }
