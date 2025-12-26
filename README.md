@@ -1,3 +1,6 @@
+> [!NOTE]  
+> There's a new, improved version of this game! Check it out at [hs7t/tfs2](https;//github.com/hs7t/tfs2)
+
 # Tubip Fabrication Simulator
 
 A small game about fabricating tubip.
